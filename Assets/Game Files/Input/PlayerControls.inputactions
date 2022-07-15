@@ -87,6 +87,24 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Button5Press",
+                    "type": "Button",
+                    "id": "e0153b64-1537-4c81-8641-a87aabc39c43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Button5Release",
+                    "type": "Button",
+                    "id": "47edd417-c667-4694-8e25-1820f152479d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "17f7f94e-065f-402f-a271-194daafc4f11",
@@ -154,34 +172,12 @@
                 },
                 {
                     "name": "",
-                    "id": "8c94ab71-1c0a-4411-a7a7-fc71783b4b7f",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Button1Press",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "dc88f574-41d3-4f4c-b956-cc9076414a9b",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Button1Press",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "df71ed6d-c4a0-403e-b650-568d1bf4c8f4",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Button1Release",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -198,34 +194,12 @@
                 },
                 {
                     "name": "",
-                    "id": "f236eff2-f1bc-4408-b06a-ca5e7bc406b7",
-                    "path": "<Keyboard>/q",
-                    "interactions": "Press(behavior=1)",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Button2Release",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "9b7b94ba-e5af-425f-9e80-6b44c9d16902",
                     "path": "<Keyboard>/rightShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Button2Release",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e30b74eb-06a7-4d37-992d-68fa2a115748",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Button2Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -243,8 +217,8 @@
                 {
                     "name": "",
                     "id": "523b97cf-182f-4bcf-bb23-0b98b4d78a08",
-                    "path": "<Keyboard>/r",
-                    "interactions": "Press(behavior=1)",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Button3Release",
@@ -254,8 +228,8 @@
                 {
                     "name": "",
                     "id": "54cee84e-98b8-4d5e-b3ae-633827f40e71",
-                    "path": "<Keyboard>/r",
-                    "interactions": "Press",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Button3Press",
@@ -276,8 +250,8 @@
                 {
                     "name": "",
                     "id": "d5f06633-d241-4a4a-a1e6-13ca33756526",
-                    "path": "<Keyboard>/space",
-                    "interactions": "Press(behavior=1)",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Button4Release",
@@ -287,11 +261,33 @@
                 {
                     "name": "",
                     "id": "331320d8-c743-47b7-a294-3b50ef7a2cda",
-                    "path": "<Keyboard>/space",
-                    "interactions": "Press",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Button4Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbeaa09c-0e47-424b-9dfb-f468b9e5f6dd",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Button5Release",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "414ee8f0-ec93-4401-9997-a632561f5dcd",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Button5Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
