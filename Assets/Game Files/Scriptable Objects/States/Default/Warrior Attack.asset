@@ -114,8 +114,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   statusEffects: []
   iframes: {x: 0, y: 0}
-  armorFrames: {x: 0, y: 0}
-  guardFrames: {x: 0, y: 30}
+  armorFrames: {x: 0, y: 29}
+  guardFrames: {x: 0, y: 28}
   armorPierce: 0
   ignoreProtections: 0
   hitParticles: []
