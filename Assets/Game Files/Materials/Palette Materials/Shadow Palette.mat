@@ -12,6 +12,7 @@ Material:
   m_ValidKeywords:
   - CHANGECOLOR2_ON
   - CHANGECOLOR3_ON
+  - CHANGECOLOR_ON
   - CHROMABERR_ON
   m_InvalidKeywords:
   - _GLOSSYREFLECTIONS_OFF
@@ -174,8 +175,8 @@ Material:
     - _ClipUvUp: 0
     - _ColorChangeLuminosity: 0
     - _ColorChangeTolerance: 0
-    - _ColorChangeTolerance2: 0.25
-    - _ColorChangeTolerance3: 0.25
+    - _ColorChangeTolerance2: 0
+    - _ColorChangeTolerance3: 0
     - _ColorRampBlend: 1
     - _ColorRampLuminosity: 0
     - _ColorRampOutline: 0

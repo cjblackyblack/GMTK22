@@ -7,14 +7,21 @@ public class PlayerController : MonoBehaviour
 	public Vector3 PositionOffset;
 	public Rigidbody rbody => GetComponent<Rigidbody>();
 
+	public bool started;
 	public void Update()
 	{
+		if (!started)
+			return;
+
 		foreach(SmartObject smartObject in PlayerManager.current.Party)
 			smartObject._inputDir = PlayerManager.current.input;
 	}
 
 	public void FixedUpdate()
 	{
+		if (!started)
+			return;
+
 		foreach (SmartObject smartObject in PlayerManager.current.Party)
 		{
 			if (smartObject.stateMachine.currentStateEnum != StateEnums.Action)
@@ -22,7 +29,7 @@ public class PlayerController : MonoBehaviour
 					smartObject.storedInput = smartObject._inputDir;
 			if (smartObject.stateMachine.currentStateEnum == StateEnums.Move || smartObject.stateMachine.currentStateEnum == StateEnums.Idle)
 				if (PlayerManager.current.buttonBuffer[0] > 0)
-					smartObject.stateMachine.ChangeStateOverride(smartObject.job.Attack);
+					smartObject.stateMachine.ChangeState(StateEnums.Action);
 		}
 
 		for (int i = 0; i < PlayerManager.current.buttonBuffer.Length; i++)

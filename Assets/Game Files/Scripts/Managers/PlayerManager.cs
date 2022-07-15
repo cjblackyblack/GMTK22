@@ -9,9 +9,8 @@ public class PlayerManager : MonoBehaviour
 	public Vector2 input;
 	public int[] buttonBuffer;
 	public int[] buttonReleaseBuffer;
-	public GambitTarget hittable;
 
-	public SmartObject[] Party;
+	public SmartObject[] Party = new SmartObject[3];
 	public SmartObject PartyLeader;
 
 	public int currentFormation;

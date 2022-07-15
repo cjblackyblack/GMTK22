@@ -56,7 +56,6 @@ public class Stats //beginning of actively measured stats that exist on the  obj
     public int HP;
     public int maxHP;
     public int moveSpeed;
-    public Vector2Int actionSpeed;
 }
 
 [System.Serializable]

@@ -140,7 +140,7 @@ MonoBehaviour:
   - 0.5
   - 1.6
   useMagic: 0
-  flatDamage: 0
+  flatDamage: 1
   hitboxKnockbackDir:
   - {x: 0, y: 1}
   - {x: 0, y: 1}

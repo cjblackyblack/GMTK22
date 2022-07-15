@@ -8,6 +8,6 @@ public class DefaultAttackState : SmartState
 	{
 		base.HandleState(smartObject);
 		if (smartObject.currentTime >= 0)
-			smartObject.stateMachine.ChangeState(StateEnums.Action); //might have to change to job 
+			smartObject.stateMachine.ChangeState(smartObject.job.Attack); //might have to change to job 
 	}
 }

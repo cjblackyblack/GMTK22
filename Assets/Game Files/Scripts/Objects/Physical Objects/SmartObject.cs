@@ -5,7 +5,6 @@ using UnityEngine;
 public class SmartObject : PhysicalObject
 {
 
-	public PlayerController playerController;// => GetComponentInParent<PlayerController>();
 	public StateMachine stateMachine => GetComponent<StateMachine>();
 	public EffectMachine effectMachine => GetComponent<EffectMachine>();
 
@@ -21,31 +20,21 @@ public class SmartObject : PhysicalObject
 	public Action<SmartObject, SmartState> OnStateChangeOverride;
 
 	public CharacterJob job;
-	public bool drawHitboxes;
-
-	public int PlayerPosition;
-	public float lerpTime;
 
 	public Vector3 targetPos;
+	[HideInInspector]
 	public Vector3 hurtPos;
 
+	public bool drawHitboxes;
 	public void Start()
 	{
-		playerController = GetComponentInParent<PlayerController>();
 		InitHurtID();
 		StartCoroutine(StartObject());
 	}
-	IEnumerator StartObject()
+	public virtual IEnumerator StartObject()
 	{
-
 		yield return new WaitForEndOfFrame();
 		stateMachine.StartMachine(states);
-
-	}
-
-	private void OnDestroy()
-	{
-
 	}
 
 	private void Update()
@@ -61,41 +50,10 @@ public class SmartObject : PhysicalObject
 		{
 			effectMachine.OnFixedUpdate();
 			stateMachine.OnFixedUpdate();
-			velocity.y += gravity;
-			if (velocity.y < terminalYVel)
-				velocity.y = terminalYVel;
 			ObjectUpdate();
-
-
-
 		}
-		velocity = new Vector3(velocity.x * friction, velocity.y, velocity.z * friction);
+		velocity = new Vector3(velocity.x * friction, 0, velocity.z * friction);
 		currentTime = Mathf.RoundToInt(activeTime);
-	}
-
-
-	public override void ObjectUpdate()
-	{
-		if (playerController == null && rbody != null)
-			rbody.velocity = velocity;
-		else if (playerController != null)
-		{
-			if (stateMachine.currentStateEnum != StateEnums.Hurt && stateMachine.currentStateEnum != StateEnums.Dead)
-			{
-				if (transform.parent == null && playerController != null)
-				{
-					transform.parent = playerController.transform;
-					transform.SetSiblingIndex(PlayerPosition);
-				}
-
-				transform.localPosition = Vector3.Slerp(transform.localPosition, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset, lerpTime);
-				if (Vector3.Distance(transform.localPosition, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset) < 0.25f)
-					transform.localPosition = PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset;
-
-				if (stateMachine.currentStateEnum != StateEnums.Hurt && stateMachine.currentStateEnum != StateEnums.Dead)
-					playerController.rbody.velocity = velocity;
-			}
-		}
 	}
 
 	public override PhysicalObjectTangibility TakeDamage(DamageInstance damageInstance)
@@ -111,11 +69,14 @@ public class SmartObject : PhysicalObject
 						velocity = (transform.position - damageInstance.origin.transform.position).normalized * damageInstance.knockbackStrength;
 						hurtPos = transform.position;
 						transform.parent = null;
+						stats.HP -= (int)damageInstance.damage;
 					}
 					break;
 				case PhysicalObjectTangibility.Armor:
 					{
 						effectMachine.OnTakeDamage(damageInstance);
+						stats.HP -= (int)damageInstance.damage;
+
 						if (damageInstance.armorPierce)
 						{
 							velocity = (transform.position - damageInstance.origin.transform.position).normalized * damageInstance.knockbackStrength;
@@ -134,6 +95,7 @@ public class SmartObject : PhysicalObject
 							stateMachine.ChangeState(StateEnums.Hurt);
 							hurtPos = transform.position;
 							transform.parent = null;
+							stats.HP -= (int)damageInstance.damage;
 						}
 					}
 					break;
@@ -163,6 +125,7 @@ public class SmartObject : PhysicalObject
 			SmartObject smartOrigin = damageInstance.origin as SmartObject;
 			if (smartOrigin != null)
 			{
+				//Reward XP
 			}
 			stateMachine.ChangeState(StateEnums.Hurt);
 		}
@@ -174,13 +137,9 @@ public class SmartObject : PhysicalObject
 		return properties.objectTangibility;
 	}
 
-	public void SetFacingDir(bool useVelocity)
+	public virtual void SetFacingDir(bool useVelocity)
 	{
-		if (playerController)
-			facingDir = PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].FacingDir;
 
-		anim.SetFloat("xDir", Mathf.RoundToInt(facingDir.x));
-		anim.SetFloat("yDir", Mathf.RoundToInt(facingDir.y));
 	}
 
 	public void SetStats(bool setActions)
@@ -190,13 +149,6 @@ public class SmartObject : PhysicalObject
 		spriteRenderer.sprite = job.sprite;
 		anim.runtimeAnimatorController = job.animator;
 	}
-
-	public void SetAlliance(Alliance alliance)
-	{
-		properties.alliance = alliance;
-		properties.baseAlliance = alliance;
-	}
-
 	public IEnumerator WaitDestroyObject()
 	{
 		yield return new WaitForFixedUpdate();

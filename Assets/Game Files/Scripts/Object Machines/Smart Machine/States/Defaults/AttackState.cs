@@ -113,10 +113,6 @@ public class AttackState : SmartState
     {
         smartObject.velocity.x = (((smartObject._inputDir.normalized * forwardMovement.Evaluate(smartObject.currentTime)) + (smartObject._inputDir.normalized.Rotate(-90) * strafeMovement.Evaluate(smartObject.currentTime))).ConvertVector2()).x * moveSpeed * smartObject.stats.moveSpeed * smartObject.statMods.moveSpeedMod;
         smartObject.velocity.z = (((smartObject._inputDir.normalized * forwardMovement.Evaluate(smartObject.currentTime)) + (smartObject._inputDir.normalized.Rotate(-90) * strafeMovement.Evaluate(smartObject.currentTime))).ConvertVector2()).z * moveSpeed * smartObject.stats.moveSpeed * smartObject.statMods.moveSpeedMod;
-        float yVel = verticalMovement.Evaluate(smartObject.currentTime);
-        if (yVel > 0)
-            yVel += -smartObject.gravity;
-        smartObject.velocity.y += yVel;
 
         HandleState(smartObject);
         AttackID(smartObject);

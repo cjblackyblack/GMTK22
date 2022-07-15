@@ -10,8 +10,6 @@ public class PhysicalObject : TangibleObject
 	public float activeTime;
 	public int currentTime;
 	public Vector3 velocity;
-	public float gravity;
-	public float terminalYVel;
 	public float friction;
 
 	public virtual void ObjectUpdate()

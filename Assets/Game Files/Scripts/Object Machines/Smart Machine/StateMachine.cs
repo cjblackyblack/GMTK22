@@ -42,13 +42,13 @@ public class StateMachine : MonoBehaviour
 	{
         //probs move this to hurt? or maybe another another check in there, lets see if just this works, but I'm thinking not enough 
         if ((newState == StateEnums.Idle || newState == StateEnums.Move) && smartObject.effectMachine.OverrideState() != null) 
-            ChangeStateOverride(smartObject.effectMachine.OverrideState());
-
+            ChangeState(smartObject.effectMachine.OverrideState());
+       
         else if (!busyChange)
            ChangeStateWait(newState);
     }
 
-    public void ChangeStateOverride(SmartState newState)
+    public void ChangeState(SmartState newState)
     {
         if (!busyChange)
            ChangeStateWait(newState);
