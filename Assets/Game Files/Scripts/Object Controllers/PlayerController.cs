@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	public Vector3 PositionOffset;
 	public Rigidbody rbody => GetComponent<Rigidbody>();
+	public Transform LineCollider;
+	public Transform TriangleCollider;
 
 	public bool started;
+	private void Start()
+	{
+		StartCoroutine(StartObject());
+	}
+
+	IEnumerator StartObject()
+	{
+		yield return new WaitUntil(() => started == true);
+		PlayerManager.current.playerController = this;
+		PlayerManager.current.SetFormation(0);
+	}
 	public void Update()
 	{
 		if (!started)
@@ -39,5 +51,9 @@ public class PlayerController : MonoBehaviour
 		for (int i = 0; i < PlayerManager.current.buttonReleaseBuffer.Length; i++)
 			if (PlayerManager.current.buttonReleaseBuffer[i] > 0)
 				PlayerManager.current.buttonReleaseBuffer[i]--;
+
+
+		LineCollider.transform.localEulerAngles = Vector3.Slerp(LineCollider.transform.localEulerAngles, new Vector3(0, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].ColliderRotation, 0), 0.1f);
+		TriangleCollider.transform.localEulerAngles = Vector3.Slerp(TriangleCollider.transform.localEulerAngles, new Vector3(0, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].ColliderRotation, 0), 0.1f);
 	}
 }
