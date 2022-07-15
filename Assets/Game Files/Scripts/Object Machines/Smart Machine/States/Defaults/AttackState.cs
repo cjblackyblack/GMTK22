@@ -116,7 +116,7 @@ public class AttackState : SmartState
 
         HandleState(smartObject);
         AttackID(smartObject);
-        CreateDamageFrames(smartObject);
+        //CreateDamageFrames(smartObject);
         CreateHitboxes(smartObject);
         CreateProjectiles(smartObject);
         CreateVFX(smartObject);
@@ -134,7 +134,6 @@ public class AttackState : SmartState
     {
         base.OnExit(smartObject);
         smartObject.properties.objectTangibility = smartObject.properties.baseTangibility;
-
     }
 
     protected void AttackID(SmartObject smartObject)
@@ -149,10 +148,13 @@ public class AttackState : SmartState
     {
         if (smartObject.currentTime >= iframes.x && smartObject.currentTime <= iframes.y && iframes != Vector2.zero)
             smartObject.properties.objectTangibility = PhysicalObjectTangibility.Invincible;
-        else if (smartObject.currentTime >= armorFrames.x && smartObject.currentTime <= armorFrames.y && armorFrames != Vector2.zero)
-            smartObject.properties.objectTangibility = PhysicalObjectTangibility.Armor;
+
         else if (smartObject.currentTime >= guardFrames.x && smartObject.currentTime <= guardFrames.y && guardFrames != Vector2.zero)
             smartObject.properties.objectTangibility = PhysicalObjectTangibility.Guard;
+
+        else if (smartObject.currentTime >= armorFrames.x && smartObject.currentTime <= armorFrames.y && armorFrames != Vector2.zero)
+            smartObject.properties.objectTangibility = PhysicalObjectTangibility.Armor;
+
         else
             smartObject.properties.objectTangibility = smartObject.properties.baseTangibility;
     }

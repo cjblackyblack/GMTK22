@@ -9,7 +9,7 @@ public class IdleState : SmartState
 		base.OnEnter(smartObject);
 		smartObject._inputDir = Vector2.zero;
 		smartObject.inputDir = Vector2.zero;
-		smartObject.anim.SetBool("Moving", false);
+		smartObject.properties.objectTangibility = PhysicalObjectTangibility.Normal; ;
 		smartObject.anim.Play("Idle", 0, 0);
 	}
 

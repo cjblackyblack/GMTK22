@@ -33,13 +33,18 @@ public class PlayerObject : SmartObject
 				}
 
 				transform.localPosition = Vector3.Slerp(transform.localPosition, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset.normalized, lerpTime);
-				if (Vector3.Distance(transform.localPosition, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset.normalized) < 0.25f)
+				if (Vector3.Distance(transform.localPosition, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset.normalized) < 0.1f)
+				{
 					transform.localPosition = PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset.normalized;
+				}
 
 				if (stateMachine.currentStateEnum != StateEnums.Hurt && stateMachine.currentStateEnum != StateEnums.Dead)
 					playerController.rbody.velocity = velocity;
 			}
 		}
+
+			anim.SetBool("Moving", stateMachine.currentStateEnum == StateEnums.Idle && (Vector3.Distance(transform.localPosition, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset.normalized) > 0.1f));
+		
 	}
 
 	public override void SetFacingDir(bool useVelocity)

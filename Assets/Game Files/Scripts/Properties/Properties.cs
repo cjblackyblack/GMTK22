@@ -55,7 +55,7 @@ public class Stats //beginning of actively measured stats that exist on the  obj
     public float scaledTime;
     public int HP;
     public int maxHP;
-    public int moveSpeed;
+    public float moveSpeed;
 }
 
 [System.Serializable]
