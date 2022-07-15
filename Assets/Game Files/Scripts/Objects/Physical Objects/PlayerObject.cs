@@ -12,7 +12,7 @@ public class PlayerObject : SmartObject
 	public override IEnumerator StartObject()
 	{
 		playerController = GetComponentInParent<PlayerController>();
-		PlayerPosition = transform.GetSiblingIndex();
+		SetPositionInFormation(transform.GetSiblingIndex());
 		yield return new WaitForEndOfFrame();
 		stateMachine.StartMachine(states);
 		PlayerManager.current.Party[PlayerPosition] = this;
@@ -49,4 +49,11 @@ public class PlayerObject : SmartObject
 		anim.SetFloat("xDir", Mathf.RoundToInt(facingDir.x));
 		anim.SetFloat("yDir", Mathf.RoundToInt(facingDir.y));
 	}
+
+	public void SetPositionInFormation(int index)
+	{
+		PlayerPosition = index;
+		transform.SetSiblingIndex(PlayerPosition);
+	}
+
 }
