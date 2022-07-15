@@ -34,6 +34,20 @@ public class PlayerController : MonoBehaviour
 		if (!started)
 			return;
 
+		bool p0hurt = false;
+		bool p1hurt = false;
+		bool p2hurt = false;
+
+		if (PlayerManager.current.Party[0].stateMachine.currentStateEnum == StateEnums.Hurt || PlayerManager.current.Party[0].stateMachine.currentStateEnum == StateEnums.Dead)
+			p0hurt = true;
+		if (PlayerManager.current.Party[1].stateMachine.currentStateEnum == StateEnums.Hurt || PlayerManager.current.Party[1].stateMachine.currentStateEnum == StateEnums.Dead)
+			p1hurt = true;
+		if (PlayerManager.current.Party[2].stateMachine.currentStateEnum == StateEnums.Hurt || PlayerManager.current.Party[2].stateMachine.currentStateEnum == StateEnums.Dead)
+			p2hurt = true;
+
+		if (p0hurt && p1hurt && p2hurt)
+			rbody.velocity *= 0;
+
 		foreach (SmartObject smartObject in PlayerManager.current.Party)
 		{
 			if (smartObject.stateMachine.currentStateEnum != StateEnums.Action)

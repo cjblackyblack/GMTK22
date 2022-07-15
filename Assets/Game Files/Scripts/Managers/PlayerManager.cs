@@ -19,7 +19,9 @@ public class PlayerManager : MonoBehaviour
 	public PlayerFormations[] PlayerFormations;
 
 	private float formationLockoutTimer = 0;
-	private float lockoutTime = 0.5f;
+	private float positionLockoutTimer = 0;
+	public float formationLockoutTime = 0.5f;
+	public float positionLockoutTime = 0.25f;
 
 	private void Start()
 	{
@@ -133,6 +135,28 @@ public class PlayerManager : MonoBehaviour
 		playerController.TriangleCollider.gameObject.SetActive(PlayerFormations[currentFormation].ColliderShape == ColliderShape.Triangle);
 	}
 
+	public void SwapFormationPositions(bool left)
+	{
+		SmartObject swappedMember = Party[1];
+		if (left)
+		{
+
+			Party[1] = Party[0];
+			Party[0] = swappedMember;
+
+		}
+		else
+		{
+			Party[1] = Party[2];
+			Party[2] = swappedMember;
+
+		}
+		(Party[0] as PlayerObject).SetPositionInFormation(0);
+		(Party[1] as PlayerObject).SetPositionInFormation(1);
+		(Party[2] as PlayerObject).SetPositionInFormation(2);
+	}
+
+
 	public void SetFormation(int index)
 	{
 		currentFormation = index;
@@ -162,12 +186,31 @@ public class PlayerManager : MonoBehaviour
 		if (formationLockoutTimer > 0)
 			formationLockoutTimer -= Time.deltaTime;
 
-		if(buttonBuffer[4] > 0 && formationLockoutTimer <= 0f)
+		if (positionLockoutTimer > 0)
+			positionLockoutTimer -= Time.deltaTime;
+
+		if (buttonBuffer[4] > 0 && formationLockoutTimer <= 0f)
 		{
 			buttonBuffer[4] = 0;
 
-			formationLockoutTimer = lockoutTime;
+			formationLockoutTimer = formationLockoutTime;
 			IncrementFormation(1);
+		}
+
+		if (buttonBuffer[2] > 0 && positionLockoutTimer <= 0f)
+		{
+			buttonBuffer[2] = 0;
+
+			positionLockoutTimer = positionLockoutTime;
+			SwapFormationPositions(true);
+		}
+
+		if (buttonBuffer[3] > 0 && positionLockoutTimer <= 0f)
+		{
+			buttonBuffer[3] = 0;
+
+			positionLockoutTimer = positionLockoutTime;
+			SwapFormationPositions(false);
 		}
 	}
 }
