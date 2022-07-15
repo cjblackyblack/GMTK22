@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: 37e88c5775510594f8d96ce866e7b8b2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5772044585326276368
+    second: BlackMageSheet_0
+  - first:
+      213: -4392065764993633376
+    second: BlackMageSheet_1
+  - first:
+      213: -184869853263117104
+    second: BlackMageSheet_2
+  - first:
+      213: 796798304712236328
+    second: BlackMageSheet_3
+  - first:
+      213: -855729928627010393
+    second: BlackMageSheet_4
+  - first:
+      213: -668587835607131056
+    second: BlackMageSheet_5
+  - first:
+      213: 8756881118545278979
+    second: BlackMageSheet_6
+  - first:
+      213: -9129665723139964011
+    second: BlackMageSheet_7
+  - first:
+      213: -1100574953382271505
+    second: BlackMageSheet_8
+  - first:
+      213: -5690383550552796842
+    second: BlackMageSheet_9
+  - first:
+      213: 2222227429059994405
+    second: BlackMageSheet_10
+  - first:
+      213: 8774819969481742124
+    second: BlackMageSheet_11
+  - first:
+      213: -645549896731835994
+    second: BlackMageSheet_12
+  - first:
+      213: 8005258721110075031
+    second: BlackMageSheet_13
+  - first:
+      213: 3007621191750616703
+    second: BlackMageSheet_14
+  - first:
+      213: -1024282052797057482
+    second: BlackMageSheet_15
+  - first:
+      213: 1209228045900046014
+    second: BlackMageSheet_16
+  - first:
+      213: 7110157011596868314
+    second: BlackMageSheet_17
+  - first:
+      213: 876401190848533708
+    second: BlackMageSheet_18
+  - first:
+      213: -7321690753351498108
+    second: BlackMageSheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlackMageSheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 16
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f019eff70495efa0800000000000000
+      internalID: -5772044585326276368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 16
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a37667f47f3c03c0800000000000000
+      internalID: -4392065764993633376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 12
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4c29219d53f6df0800000000000000
+      internalID: -184869853263117104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 12
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d910626dbce0b00800000000000000
+      internalID: 796798304712236328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 12
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4448ce926df14f0800000000000000
+      internalID: -855729928627010393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_5
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 12
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c5d75e7e2b8b6f0800000000000000
+      internalID: -668587835607131056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 14
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308773b3bf0b68970800000000000000
+      internalID: 8756881118545278979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 14
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593ce265569ec4180800000000000000
+      internalID: -9129665723139964011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 14
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe525f639e8f9b0f0800000000000000
+      internalID: -1100574953382271505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_9
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 14
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65113994f42b701b0800000000000000
+      internalID: -5690383550552796842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 14
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5232047a210f6de10800000000000000
+      internalID: 2222227429059994405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_11
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 14
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2796f0754c66c970800000000000000
+      internalID: 8774819969481742124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_12
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 14
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a142880acb8a07f0800000000000000
+      internalID: -645549896731835994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_13
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 19
+        height: 12
+      alignment: 9
+      pivot: {x: 0.47368422, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7962dd6a464681f60800000000000000
+      internalID: 8005258721110075031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_14
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 16
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f768b31f9873db920800000000000000
+      internalID: 3007621191750616703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_15
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 0
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636393d56e409c1f0800000000000000
+      internalID: -1024282052797057482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_16
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebedf40408a08c010800000000000000
+      internalID: 1209228045900046014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_17
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adafb7d712a5ca260800000000000000
+      internalID: 7110157011596868314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_18
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4914d5d3a992c00800000000000000
+      internalID: 876401190848533708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMageSheet_19
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 0
+        width: 14
+        height: 11
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36363637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486c8334d01246a90800000000000000
+      internalID: -7321690753351498108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 92bd53d224e3a6a41aa265f464465700
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BlackMageSheet_11: 8774819969481742124
+      BlackMageSheet_16: 1209228045900046014
+      BlackMageSheet_19: -7321690753351498108
+      BlackMageSheet_17: 7110157011596868314
+      BlackMageSheet_7: -9129665723139964011
+      BlackMageSheet_3: 796798304712236328
+      BlackMageSheet_4: -855729928627010393
+      BlackMageSheet_10: 2222227429059994405
+      BlackMageSheet_2: -184869853263117104
+      BlackMageSheet_15: -1024282052797057482
+      BlackMageSheet_12: -645549896731835994
+      BlackMageSheet_0: -5772044585326276368
+      BlackMageSheet_18: 876401190848533708
+      BlackMageSheet_9: -5690383550552796842
+      BlackMageSheet_14: 3007621191750616703
+      BlackMageSheet_8: -1100574953382271505
+      BlackMageSheet_1: -4392065764993633376
+      BlackMageSheet_5: -668587835607131056
+      BlackMageSheet_6: 8756881118545278979
+      BlackMageSheet_13: 8005258721110075031
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

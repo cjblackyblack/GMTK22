@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: 5825ecfddcf052c4981428cdb18af2e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1492914945810849797
+    second: WhiteMageSheet_0
+  - first:
+      213: -4082811946142436757
+    second: WhiteMageSheet_1
+  - first:
+      213: -2636303224676055750
+    second: WhiteMageSheet_2
+  - first:
+      213: 7773346352337398842
+    second: WhiteMageSheet_3
+  - first:
+      213: 4129171481267515907
+    second: WhiteMageSheet_4
+  - first:
+      213: 2863586841593280618
+    second: WhiteMageSheet_5
+  - first:
+      213: 3989432531351155637
+    second: WhiteMageSheet_6
+  - first:
+      213: -1686544170585818794
+    second: WhiteMageSheet_7
+  - first:
+      213: -6160595781252998712
+    second: WhiteMageSheet_8
+  - first:
+      213: 9160291478809570452
+    second: WhiteMageSheet_9
+  - first:
+      213: 488268650813808501
+    second: WhiteMageSheet_10
+  - first:
+      213: 1527734640249412750
+    second: WhiteMageSheet_11
+  - first:
+      213: -4888911818911661324
+    second: WhiteMageSheet_12
+  - first:
+      213: 4513259646822504074
+    second: WhiteMageSheet_13
+  - first:
+      213: 3037329664306954878
+    second: WhiteMageSheet_14
+  - first:
+      213: 9188442550558148643
+    second: WhiteMageSheet_15
+  - first:
+      213: -1776976627884051892
+    second: WhiteMageSheet_16
+  - first:
+      213: 5043503140864387505
+    second: WhiteMageSheet_17
+  - first:
+      213: -2167985297172138216
+    second: WhiteMageSheet_18
+  - first:
+      213: -3350828929613174795
+    second: WhiteMageSheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WhiteMageSheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 16
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff921f34c9184be0800000000000000
+      internalID: -1492914945810849797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 16
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b627579aa20f657c0800000000000000
+      internalID: -4082811946142436757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 12
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3587f45f28f96bd0800000000000000
+      internalID: -2636303224676055750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 12
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c262f825970eb60800000000000000
+      internalID: 7773346352337398842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 12
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302bf9db593cd4930800000000000000
+      internalID: 4129171481267515907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_5
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 12
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6876ac7f018db720800000000000000
+      internalID: 2863586841593280618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3b29610cf4d5730800000000000000
+      internalID: 3989432531351155637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659f93633013898e0800000000000000
+      internalID: -1686544170585818794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c915a5f6ca218aa0800000000000000
+      internalID: -6160595781252998712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_9
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c6b711194ef1f70800000000000000
+      internalID: 9160291478809570452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f57be30cda6c600800000000000000
+      internalID: 488268650813808501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_11
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c102f9f8a933510800000000000000
+      internalID: 1527734640249412750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_12
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2cf8f6a98172cb0800000000000000
+      internalID: -4888911818911661324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_13
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 19
+        height: 12
+      alignment: 9
+      pivot: {x: 0.47368422, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86d5fb8cb152ae30800000000000000
+      internalID: 4513259646822504074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_14
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 16
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72c5cabc33c62a20800000000000000
+      internalID: 3037329664306954878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_15
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 0
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3284a1931d7e38f70800000000000000
+      internalID: 9188442550558148643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_16
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42bcc8fb29e657e0800000000000000
+      internalID: -1776976627884051892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_17
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9e9ce826f1ef540800000000000000
+      internalID: 5043503140864387505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_18
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817f8c3dbd4c9e1e0800000000000000
+      internalID: -2167985297172138216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteMageSheet_19
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 0
+        width: 16
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7ed4b87d67f71d0800000000000000
+      internalID: -3350828929613174795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WhiteMageSheet_19: -3350828929613174795
+      WhiteMageSheet_2: -2636303224676055750
+      WhiteMageSheet_1: -4082811946142436757
+      WhiteMageSheet_7: -1686544170585818794
+      WhiteMageSheet_15: 9188442550558148643
+      WhiteMageSheet_11: 1527734640249412750
+      WhiteMageSheet_12: -4888911818911661324
+      WhiteMageSheet_0: -1492914945810849797
+      WhiteMageSheet_5: 2863586841593280618
+      WhiteMageSheet_10: 488268650813808501
+      WhiteMageSheet_18: -2167985297172138216
+      WhiteMageSheet_17: 5043503140864387505
+      WhiteMageSheet_4: 4129171481267515907
+      WhiteMageSheet_8: -6160595781252998712
+      WhiteMageSheet_9: 9160291478809570452
+      WhiteMageSheet_14: 3037329664306954878
+      WhiteMageSheet_3: 7773346352337398842
+      WhiteMageSheet_13: 4513259646822504074
+      WhiteMageSheet_6: 3989432531351155637
+      WhiteMageSheet_16: -1776976627884051892
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
