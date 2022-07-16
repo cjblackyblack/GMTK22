@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerObject : SmartObject
 {
 	public PlayerController playerController;
-
+	[HideInInspector]
+	public PartyElement PartyElement;
 	public int PlayerPosition;
 	public float lerpTime;
 
@@ -16,6 +17,9 @@ public class PlayerObject : SmartObject
 		yield return new WaitForEndOfFrame();
 		stateMachine.StartMachine(states);
 		PlayerManager.current.Party[PlayerPosition] = this;
+		PartyElement = UIManager.current.PartyElements[PlayerPosition];
+		PartyElement.SetMaxHealth(stats.maxHP);
+		PartyElement.UpdateHealth(stats.HP);
 		playerController.started = true;
 	}
 	public override void ObjectUpdate()
@@ -45,6 +49,87 @@ public class PlayerObject : SmartObject
 
 			anim.SetBool("Moving", stateMachine.currentStateEnum == StateEnums.Idle && (Vector3.Distance(transform.localPosition, PlayerManager.current.PlayerFormations[PlayerManager.current.currentFormation].playerPositions[PlayerPosition].LocalOffset.normalized) > 0.1f));
 		
+	}
+
+	public override PhysicalObjectTangibility TakeDamage(DamageInstance damageInstance)
+	{
+		if (damageInstance.hitStun > 0)
+		{
+			switch (properties.objectTangibility)
+			{
+				case PhysicalObjectTangibility.Normal:
+					{
+						effectMachine.OnTakeDamage(damageInstance);
+						stateMachine.ChangeState(StateEnums.Hurt);
+						velocity = (transform.position - damageInstance.origin.transform.position).normalized * damageInstance.knockbackStrength;
+						hurtPos = transform.position;
+						transform.parent = null;
+						stats.HP -= (int)damageInstance.damage;
+					}
+					break;
+				case PhysicalObjectTangibility.Armor:
+					{
+						effectMachine.OnTakeDamage(damageInstance);
+						stats.HP -= (int)damageInstance.damage;
+
+						if (damageInstance.armorPierce)
+						{
+							velocity = (transform.position - damageInstance.origin.transform.position).normalized * damageInstance.knockbackStrength;
+							stateMachine.ChangeState(StateEnums.Hurt);
+							hurtPos = transform.position;
+							transform.parent = null;
+						}
+					}
+					break;
+				case PhysicalObjectTangibility.Guard:
+					{
+						if (damageInstance.armorPierce)
+						{
+							effectMachine.OnTakeDamage(damageInstance);
+							velocity = (transform.position - damageInstance.origin.transform.position).normalized * damageInstance.knockbackStrength;
+							stateMachine.ChangeState(StateEnums.Hurt);
+							hurtPos = transform.position;
+							transform.parent = null;
+							stats.HP -= (int)damageInstance.damage;
+						}
+					}
+					break;
+				case PhysicalObjectTangibility.Invincible:
+					{
+
+					}
+					break;
+				case PhysicalObjectTangibility.Intangible:
+					{
+
+					}
+					break;
+			}
+		}
+		else
+		{
+			if (properties.objectTangibility == PhysicalObjectTangibility.Invincible && damageInstance.damage > 0)
+				return properties.objectTangibility;
+			OnStateChange?.Invoke(this, StateEnums.Hurt);
+		}
+
+		stats.HP = Mathf.Clamp(stats.HP, 0, stats.maxHP);
+
+		if (stats.HP <= 0 && stateMachine.currentStateEnum != StateEnums.Dead) //we need to die (ie poisoned to death)
+		{
+			SmartObject smartOrigin = damageInstance.origin as SmartObject;
+			if (smartOrigin != null)
+			{
+				//Reward XP
+			}
+			stateMachine.ChangeState(StateEnums.Hurt);
+		}
+		else if (stats.HP > 0 && stateMachine.currentStateEnum == StateEnums.Dead && damageInstance.damage < 0)//we were dead but have been healed
+		{
+			stateMachine.ChangeState(StateEnums.Idle);
+		}
+		PartyElement.UpdateHealth(stats.HP);
+		return properties.objectTangibility;
 	}
 
 	public override void SetFacingDir(bool useVelocity)

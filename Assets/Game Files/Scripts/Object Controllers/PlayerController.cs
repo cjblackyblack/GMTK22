@@ -34,15 +34,24 @@ public class PlayerController : MonoBehaviour
 		if (!started)
 			return;
 
+		bool p0dead = PlayerManager.current.Party[0].stateMachine.currentStateEnum == StateEnums.Dead;
+		bool p1dead = PlayerManager.current.Party[1].stateMachine.currentStateEnum == StateEnums.Dead;
+		bool p2dead = PlayerManager.current.Party[2].stateMachine.currentStateEnum == StateEnums.Dead;
 		bool p0hurt = false;
 		bool p1hurt = false;
 		bool p2hurt = false;
 
-		if (PlayerManager.current.Party[0].stateMachine.currentStateEnum == StateEnums.Hurt || PlayerManager.current.Party[0].stateMachine.currentStateEnum == StateEnums.Dead)
+		if (p0dead && p1dead && p2dead)
+		{
+			started = false;
+			GameManager.current.GameOver(false);
+		}
+
+		if (PlayerManager.current.Party[0].stateMachine.currentStateEnum == StateEnums.Hurt || p0dead)
 			p0hurt = true;
-		if (PlayerManager.current.Party[1].stateMachine.currentStateEnum == StateEnums.Hurt || PlayerManager.current.Party[1].stateMachine.currentStateEnum == StateEnums.Dead)
+		if (PlayerManager.current.Party[1].stateMachine.currentStateEnum == StateEnums.Hurt || p1dead)
 			p1hurt = true;
-		if (PlayerManager.current.Party[2].stateMachine.currentStateEnum == StateEnums.Hurt || PlayerManager.current.Party[2].stateMachine.currentStateEnum == StateEnums.Dead)
+		if (PlayerManager.current.Party[2].stateMachine.currentStateEnum == StateEnums.Hurt || p2dead)
 			p2hurt = true;
 
 		if (p0hurt && p1hurt && p2hurt)
