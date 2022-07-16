@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Wizard Idle State
   m_EditorClassIdentifier: 
   interuptable: 1
-  attackDelayFrames: 30
+  attackDelayFrames: 60

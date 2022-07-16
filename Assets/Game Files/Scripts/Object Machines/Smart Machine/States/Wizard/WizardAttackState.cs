@@ -128,7 +128,10 @@ public class WizardAttackState : SmartState
     public override void HandleState(SmartObject smartObject)
     {
         if (smartObject.currentTime > maxTime)
-            smartObject.stateMachine.ChangeState(StateEnums.Idle);
+        {
+            smartObject.stateMachine.ChangeState(StateEnums.Move);
+            
+        }
     }
 
     public override void OnExit(SmartObject smartObject)

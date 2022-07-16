@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interuptable: 1
   thoughtRate: 120
-  moveSpeed: 1
+  moveSpeed: 2.99
   MPRestoreTime: 180
   strafeMultiplier:
     serializedVersion: 2

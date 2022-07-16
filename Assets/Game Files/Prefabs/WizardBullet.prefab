@@ -53,8 +53,8 @@ MonoBehaviour:
   properties:
     baseTangibility: 0
     objectTangibility: 0
-    alliance: 2
-    baseAlliance: 2
+    alliance: 0
+    baseAlliance: 0
   stats:
     scaledTime: 1
     HP: 1
@@ -80,7 +80,7 @@ MonoBehaviour:
   target: {fileID: 0}
   inputDir: {x: 1, y: 1}
   drawHitboxes: 1
-  targetAlliance: 0
+  targetAlliance: 2
   hitCount: 2
 --- !u!114 &6458015594655456525
 MonoBehaviour:

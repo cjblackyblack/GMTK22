@@ -7,7 +7,7 @@ public class EnemyObject : SmartObject
 	public AnimationCurve flyCurve;
 	public override void SetFacingDir(bool useVelocity)
 	{
-
+		
 	}
 
 	public override void ObjectUpdate()
