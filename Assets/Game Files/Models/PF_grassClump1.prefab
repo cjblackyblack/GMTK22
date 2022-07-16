@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8845010374069966220}
   m_Layer: 0
-  m_Name: M_grassClump1
+  m_Name: PF_grassClump1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
