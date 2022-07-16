@@ -7,18 +7,25 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
 	public static UIManager current;
-
+	[Header("Refs")]
 	public RectTransform[] FormationVis;
-
 	public TextMeshProUGUI scoreText;
 	public TextMeshProUGUI roundTimerText;
+
+	[Header("Scoring")]
 	private int displayScore;
 	private int lateScore;
 	[SerializeField]
 	private int lateScoreIncrement;
 
+	[Header("Timing")]
 	public float RoundTime;
 	public float RoundTimer;
+
+	[Header("HP")]
+	public PartyElement[] PartyElements;
+	public Sprite FullHeart;
+	public Sprite HalfHeart;
 
 	private void Start()
 	{
