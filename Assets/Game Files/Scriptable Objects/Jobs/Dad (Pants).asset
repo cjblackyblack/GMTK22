@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Attack: {fileID: 11400000, guid: a5d69f73891fb2f4d81dddbc5891297b, type: 2}
   SpecialAttack: {fileID: 0}
-  jobName: Black Mage
+  jobName: Pants Dad
   jobStats:
     maxHP:
       serializedVersion: 2
@@ -40,6 +40,5 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  jobGambits: []
-  animator: {fileID: 9100000, guid: 3860e84c5aab42244ab4c9b317614568, type: 2}
-  sprite: {fileID: -5772044585326276368, guid: 37e88c5775510594f8d96ce866e7b8b2, type: 3}
+  animator: {fileID: 9100000, guid: 8a24d1da8e26126438c51480f80b0450, type: 2}
+  sprite: {fileID: 1331276507, guid: 55079fa4599f4d544ac747922693b46b, type: 3}

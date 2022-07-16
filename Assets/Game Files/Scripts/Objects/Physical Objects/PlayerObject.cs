@@ -6,7 +6,7 @@ public class PlayerObject : SmartObject
 {
 	public PlayerController playerController;
 	[HideInInspector]
-	public PartyElement PartyElement;
+	//public PartyElement PartyElement;
 	public int PlayerPosition;
 	public float lerpTime;
 
@@ -17,9 +17,9 @@ public class PlayerObject : SmartObject
 		yield return new WaitForEndOfFrame();
 		stateMachine.StartMachine(states);
 		PlayerManager.current.Party[PlayerPosition] = this;
-		PartyElement = UIManager.current.PartyElements[PlayerPosition];
-		PartyElement.SetMaxHealth(stats.maxHP);
-		PartyElement.UpdateHealth(stats.HP);
+		//PartyElement = UIManager.current.PartyElements[PlayerPosition];
+		//PartyElement.SetMaxHealth(stats.maxHP);
+		//PartyElement.UpdateHealth(stats.HP);
 		playerController.started = true;
 	}
 	public override void ObjectUpdate()
@@ -128,7 +128,7 @@ public class PlayerObject : SmartObject
 		{
 			stateMachine.ChangeState(StateEnums.Idle);
 		}
-		PartyElement.UpdateHealth(stats.HP);
+		//PartyElement.UpdateHealth(stats.HP);
 		return properties.objectTangibility;
 	}
 

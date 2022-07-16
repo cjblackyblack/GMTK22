@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemyObject : SmartObject
 {
+	public EnemyTypes type;
 	public AnimationCurve flyCurve;
+	void Awake(){
+		EnemyManager.enemyManager.enemyDict[type].currentNumber++;
+	}
 	public override void SetFacingDir(bool useVelocity)
 	{
 		

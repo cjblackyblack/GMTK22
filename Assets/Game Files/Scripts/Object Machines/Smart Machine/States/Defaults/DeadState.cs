@@ -9,7 +9,10 @@ public class DeadState : SmartState
 	public override void OnEnter(SmartObject smartObject)
 	{
 		base.OnEnter(smartObject);
-
+		EnemyObject eobj = smartObject.GetComponent<EnemyObject>();
+		if(eobj){
+			EnemyManager.enemyManager.enemyDict[eobj.type].maxNumber--;
+		}
 		smartObject.velocity *= 0;
 		smartObject.properties.objectTangibility = PhysicalObjectTangibility.Intangible;
 
