@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
 		if(Grass.Count == 0 && started)
 		{
 			RoundWin();
-
 		}
 		for (int i = Grass.Count -1; i >= 0; i--)
 		{
@@ -60,6 +59,7 @@ public class GameManager : MonoBehaviour
 	{
 		started = false;
 		round = 0;
+		LoadLevel(round);
 	}
 
 	public void Pause()
