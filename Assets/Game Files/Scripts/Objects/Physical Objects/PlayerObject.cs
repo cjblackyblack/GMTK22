@@ -178,6 +178,7 @@ public class PlayerObject : SmartObject
 		PartyElement.label.text = job.jobName;
 		PartyElement.SetMaxHealth(stats.maxHP);
 		PartyElement.UpdateHealth(stats.HP);
+		stateMachine.ChangeState(StateEnums.Idle);
 	}
 
 	public override void SetFacingDir(bool useVelocity)
