@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game Files/Scenes/Sandbox 3.unity
     guid: 9852d58f521ac0944a4ed52b31f87043
+  - enabled: 1
+    path: Assets/Game Files/Scenes/Sandbox 4.unity
+    guid: 44ac2d730ec905a47bea385ec5e855bb
   m_configObjects: {}

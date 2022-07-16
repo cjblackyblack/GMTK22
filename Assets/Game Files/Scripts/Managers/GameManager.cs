@@ -87,11 +87,13 @@ public class GameManager : MonoBehaviour
 	public void ReloadCurrentLevel()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
 	}
 
 	private void OnLevelWasLoaded(int level)
 	{
 		StartCoroutine(WipeScreen(-wipeSpeed, 1, 0));
+		started = true;
 	}
 	public IEnumerator WipeScreen(float rate, float start, float goal)
 	{
