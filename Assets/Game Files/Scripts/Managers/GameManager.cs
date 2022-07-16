@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 	public static GameManager current;
+	public int score;
+
+
 	public List<TangibleObject> Grass;
 	public int round;
-	bool started;
+	public bool started;
 
 	[Header("Screen Wipe")]
 	public float wipeSpeed;
 	float fadeTime;
 	float wipe;
 	public Material[] transitions;
+
 	private void Start()
 	{
 		if (current != null && current != this)
@@ -48,6 +52,11 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	public void IncrementScore(int delta)
+	{
+		score += delta;
+		UIManager.current.UpdateDisplayScore(score);
+	}
 	public void RoundWin()
 	{
 		started = false;
@@ -59,7 +68,9 @@ public class GameManager : MonoBehaviour
 	{
 		started = false;
 		round = 0;
+		score = 0;
 		LoadLevel(round);
+		UIManager.current.UpdateDisplayScore(score);
 	}
 
 	public void Pause()
