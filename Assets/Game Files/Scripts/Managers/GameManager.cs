@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
 		{
 			PlayerManager.current.storedHP[i] = PlayerManager.current.StaticParty[i].stats.HP;
 		}
+		GameWon = (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 2);
 		round++;
 		LoadLevel(round);
 	}

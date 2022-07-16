@@ -148,8 +148,9 @@ public class PlayerObject : SmartObject
 
 	public override void SetJob(CharacterJob newJob, bool restoreHP)
 	{
-		if (!job) return;
+		//if (!job) return;
 		//SET STATS HERE
+		job = newJob;
 		stats.maxHP = job.jobStats.maxHP;
 		if (restoreHP)
 		{
@@ -170,6 +171,7 @@ public class PlayerObject : SmartObject
 			}
 		if (stats.HP == 0)
 			stats.HP = 2;
+
 		spriteRenderer.sprite = job.sprite;
 		anim.runtimeAnimatorController = job.animator;
 
