@@ -73,5 +73,5 @@ public class StatMods //modifications applied to Stats
 [System.Serializable]
 public class BaseStats //Exists on the job, of the object
 {
-    public AnimationCurve maxHP;
+    public int maxHP;
 }

@@ -12,34 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b2ff0f3fd08894caf69f7a1fbdb36a, type: 3}
   m_Name: Black Mage
   m_EditorClassIdentifier: 
-  Attack: {fileID: 11400000, guid: a5d69f73891fb2f4d81dddbc5891297b, type: 2}
+  Attack: {fileID: 11400000, guid: 3a9805a3e004be74aa9e8e08907065f9, type: 2}
   SpecialAttack: {fileID: 0}
   jobName: Black Mage
   jobStats:
-    maxHP:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 10
-        inSlope: 4.375386
-        outSlope: 4.375386
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.0636574
-      - serializedVersion: 3
-        time: 100
-        value: 800
-        inSlope: 7.9
-        outSlope: 7.9
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  jobGambits: []
+    maxHP: 6
   animator: {fileID: 9100000, guid: 3860e84c5aab42244ab4c9b317614568, type: 2}
   sprite: {fileID: -5772044585326276368, guid: 37e88c5775510594f8d96ce866e7b8b2, type: 3}

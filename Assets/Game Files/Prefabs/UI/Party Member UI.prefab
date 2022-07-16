@@ -604,6 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659e20fd7b859e348b69fcb45b4d6193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  label: {fileID: 4695388747990813177}
   healthbar: {fileID: 4695388747268655589}
 --- !u!222 &4695388748176766211
 CanvasRenderer:
