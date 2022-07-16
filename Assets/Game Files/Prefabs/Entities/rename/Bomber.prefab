@@ -113,7 +113,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190988001925718836}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3499999, y: 1, z: 6.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -144,8 +144,8 @@ MonoBehaviour:
     baseAlliance: 1
   stats:
     scaledTime: 1
-    HP: 10
-    maxHP: 10
+    HP: 1
+    maxHP: 1
     moveSpeed: 10
   statMods:
     maxHPMod: 1
@@ -162,16 +162,16 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   friction: 0.9
   states:
-  - {fileID: 11400000, guid: bda8eed8854a8a04fb80353af38072d4, type: 2}
-  - {fileID: 11400000, guid: caa7f0d559785f04a9410ae87e2455e7, type: 2}
-  - {fileID: 11400000, guid: 10d12def376c83c47b1431e62b7ac8cb, type: 2}
+  - {fileID: 11400000, guid: ec3c88aaa7dd1b849b5cf8b9228bbc7e, type: 2}
+  - {fileID: 11400000, guid: 7d36980171313ef478e641369db30c62, type: 2}
+  - {fileID: 11400000, guid: d183bfbd914d61f489cd5990a860d109, type: 2}
   - {fileID: 11400000, guid: 4f3bb058d2ee899488f285c27f5f639c, type: 2}
   - {fileID: 11400000, guid: d3980caca7fb6b74ca9b46e8443a0032, type: 2}
   facingDir: {x: 1, y: 0}
   _inputDir: {x: 0, y: 0}
   inputDir: {x: 0, y: 0, z: 0}
   storedInput: {x: 0, y: 0}
-  job: {fileID: 11400000, guid: 3d2d706654c898843a8415ffd557c560, type: 2}
+  job: {fileID: 11400000, guid: ee0fe3f8a59e51d4eafa835bcaaa8145, type: 2}
   targetPos: {x: 0, y: 0, z: 0}
   hurtPos: {x: 0, y: 0, z: 0}
   drawHitboxes: 0
@@ -214,6 +214,15 @@ MonoBehaviour:
   currentStateEnum: 0
   currentState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
   previousState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
+  playerTargetMem: 0
+  randomIntMem: 0
+  savedTime: 0
+  dirMem: {x: 0, y: 0}
+  pointMem:
+    point: {fileID: 0}
+    NinjaMove: {x: 0, y: 0}
+    NinjaShoot: {x: 0, y: 0}
+    BomberSpawnDir: {x: 0, y: 0}
 --- !u!114 &7469762252290338674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +356,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2759625832949664974, guid: df9d7bcc268b48340af4c010e59cb2af, type: 3}
+  m_Sprite: {fileID: -5772044585326276368, guid: 37e88c5775510594f8d96ce866e7b8b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -368,7 +377,7 @@ Animator:
   m_GameObject: {fileID: 2190988002565643751}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e6c2c7e6c9422a941b5936b0f4770b65, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3860e84c5aab42244ab4c9b317614568, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
