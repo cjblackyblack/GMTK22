@@ -64,11 +64,16 @@ public class TangibleObject : MonoBehaviour, ITimeScaleable
         }
         else
             stats.HP -= Mathf.FloorToInt(damageInstance.damage);
-    if (stats.HP <= 0)
-      Destroy(this.gameObject);
+        if (stats.HP <= 0)
+            DestroyBehaviour();
         return properties.objectTangibility;
 	}
 
+    void DestroyBehaviour()
+	{
+        GameManager.current.IncrementScore(stats.scoreValue);
+        Destroy(this.gameObject);
+    }
     public void SetTimeScale(float speed)
     {
         //throw new System.NotImplementedException();

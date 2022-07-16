@@ -138,17 +138,24 @@ public class PlayerManager : MonoBehaviour
 	public void SwapFormationPositions(bool left)
 	{
 		SmartObject swappedMember = Party[1];
+		RectTransform swappedRect = UIManager.current.FormationVis[1];
 		if (left)
 		{
 
 			Party[1] = Party[0];
+			UIManager.current.FormationVis[1] = UIManager.current.FormationVis[0];
+
 			Party[0] = swappedMember;
+			UIManager.current.FormationVis[0] = swappedRect;
 
 		}
 		else
 		{
 			Party[1] = Party[2];
+			UIManager.current.FormationVis[1] = UIManager.current.FormationVis[2];
+
 			Party[2] = swappedMember;
+			UIManager.current.FormationVis[2] = swappedRect;
 
 		}
 		(Party[0] as PlayerObject).SetPositionInFormation(0);
@@ -183,6 +190,9 @@ public class PlayerManager : MonoBehaviour
 
 	private void Update()
 	{
+		if (playerController == null)
+			return;
+
 		if (formationLockoutTimer > 0)
 			formationLockoutTimer -= Time.deltaTime;
 
