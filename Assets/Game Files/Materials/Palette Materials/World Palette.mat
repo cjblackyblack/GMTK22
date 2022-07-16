@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: World Palette
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - ALPHACUTOFF_ON
   m_InvalidKeywords:
   - GLOWLIGHT_ON
   - _GLOSSYREFLECTIONS_OFF
@@ -84,7 +85,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0b8da974a6429b8489e21c2a5d8dd509, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -150,7 +151,7 @@ Material:
     - Vector1_945c90e48a704a18ba0d211d5fb7ff6b: 0.7
     - _Alpha: 1
     - _AlphaClip: 0
-    - _AlphaCutoffValue: 0.25
+    - _AlphaCutoffValue: 0
     - _AlphaOutlineBlend: 1
     - _AlphaOutlineGlow: 5
     - _AlphaOutlineMinAlpha: 0
