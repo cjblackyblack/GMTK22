@@ -16,39 +16,6 @@ MonoBehaviour:
   SpecialAttack: {fileID: 0}
   jobName: Warrior
   jobStats:
-    maxHP:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 14
-        inSlope: 4.278729
-        outSlope: 4.278729
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.1175446
-      - serializedVersion: 3
-        time: 50.217346
-        value: 451.86957
-        inSlope: 3.8972924
-        outSlope: 3.8972924
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.118854895
-      - serializedVersion: 3
-        time: 100
-        value: 999
-        inSlope: 10.990383
-        outSlope: 10.990383
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  jobGambits: []
+    maxHP: 10
   animator: {fileID: 9100000, guid: 7cafb585f6911dc4c9006b478968bcf6, type: 2}
   sprite: {fileID: 4070926113319250514, guid: 09258a71df0e43e4dabc7da2b223d326, type: 3}

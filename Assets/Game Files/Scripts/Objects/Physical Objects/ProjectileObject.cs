@@ -15,11 +15,17 @@ public class ProjectileObject : PhysicalObject
 	public int hitCount;
 	private void Update()
 	{
+		if (!GameManager.current.started)
+			return;
+
 		stateMachine.OnUpdate();
 	}
 
 	private void FixedUpdate()
 	{
+		if (!GameManager.current.started)
+
+			return;
 		activeTime += (stats.scaledTime);
 		if (activeTime - currentTime >= 1)
 		{

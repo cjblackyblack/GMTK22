@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PartyElement : MonoBehaviour
 {
+	public TextMeshProUGUI label;
 	public Transform healthbar;
 	public void UpdateHealth(int newHPTotal)
 	{

@@ -8,10 +8,16 @@ public class GameManager : MonoBehaviour
 	public static GameManager current;
 	public int score;
 
-
+	[Header("Round Data")]
 	public List<TangibleObject> Grass;
 	public int round;
 	public bool started;
+	public bool GameWon;
+
+	[Header("Job Data")]
+	public CharacterJob[] Jobs;
+	public CharacterJob[] CurrentJobs = new CharacterJob[3];
+
 
 	[Header("Screen Wipe")]
 	public float wipeSpeed;
@@ -33,7 +39,11 @@ public class GameManager : MonoBehaviour
 	IEnumerator StartManager()
 	{
 		yield return new WaitForEndOfFrame();
-		started = true;
+		for(int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+		{
+			if(SceneManager.GetSceneByBuildIndex(i) == SceneManager.GetActiveScene())
+				LoadLevelBehaviour(SceneManager.GetActiveScene().buildIndex);
+		}
 	}
 
 	private void Update()
@@ -60,6 +70,13 @@ public class GameManager : MonoBehaviour
 	public void RoundWin()
 	{
 		started = false;
+		PlayerManager.current.playerController.started = false;
+		if(PlayerManager.current.StaticParty[0] != null)
+		for (int i = 0; i < PlayerManager.current.StaticParty.Length; i++)
+		{
+			PlayerManager.current.storedHP[i] = PlayerManager.current.StaticParty[i].stats.HP;
+		}
+		GameWon = (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 2);
 		round++;
 		LoadLevel(round);
 	}
@@ -68,9 +85,9 @@ public class GameManager : MonoBehaviour
 	{
 		started = false;
 		round = 0;
-		score = 0;
-		LoadLevel(round);
 		UIManager.current.UpdateDisplayScore(score);
+
+		LoadLevel(SceneManager.sceneCountInBuildSettings - 1);
 	}
 
 	public void Pause()
@@ -93,19 +110,99 @@ public class GameManager : MonoBehaviour
 		//eventSystem.gameObject.SetActive(true);
 		Time.timeScale = 1;
 		SceneManager.LoadScene(scene);
+		UIManager.current.SetAllGameCanvasesActive(false);
+		yield return new WaitForSeconds(0.1f);
+		LoadLevelBehaviour(scene);
 	}
 
+	public void LoadLevelBehaviour(int scene)
+	{
+		StartCoroutine(LoadLevelBehaviourCoroutine(scene));
+
+		IEnumerator LoadLevelBehaviourCoroutine(int scene)
+		{
+			yield return new WaitForEndOfFrame();
+			UIManager.current.UpdateGameCanvasRefs();
+			if (SceneManager.GetActiveScene().name == "End") //hack because we don't yet know what number the final scene is
+			{
+				UIManager.current.SetAllGameCanvasesActive(false);
+			}
+			else
+			{
+				switch (scene)
+				{
+					case 0:
+						{
+							score = 0;
+							PlayerManager.current.SetFormation(0);
+							UIManager.current.ResetFormationVis();
+							UIManager.current.SetAllGameCanvasesActive(false);
+							for (int i = 0; i < PlayerManager.current.Party.Length; i++)
+							{
+								PlayerManager.current.Party[i].SetJob(CurrentJobs[i], true);
+							}
+
+							for (int i = 0; i < 3; i++)
+							{
+								CurrentJobs[i] = Jobs[Random.Range(0, Jobs.Length)];
+							}
+							break;
+						}
+					default:
+						{
+							PlayerManager.current.SetFormation(0);
+							UIManager.current.ResetFormationVis();
+							UIManager.current.SetAllGameCanvasesActive(true);
+
+							for (int i = 0; i < PlayerManager.current.Party.Length; i++)
+							{
+								PlayerManager.current.Party[i].SetJob(CurrentJobs[i], false);
+							}
+							break;
+						}
+				}
+			}
+
+			yield return new WaitForSecondsRealtime(0.25f);
+			StartCoroutine(WipeScreen(-wipeSpeed, 1, 0));
+			//later behaviours here
+			Debug.Log("starting");
+			if (SceneManager.GetActiveScene().name == "End") //hack because we don't yet know what number the final scene is
+			{
+
+			}
+			else
+				switch (scene)
+				{
+					case 0:
+						{
+							PlayerManager.current.playerController.started = true;
+							started = true;
+							break;
+						}
+					case 1:
+						{
+							PlayerManager.current.playerController.started = true;
+							started = true;
+							break;
+						}
+					default:
+						{
+							PlayerManager.current.playerController.started = true;
+							started = true;
+							break;
+						}
+				}
+		}
+		
+
+	}
 	public void ReloadCurrentLevel()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
 	}
 
-	private void OnLevelWasLoaded(int level)
-	{
-		StartCoroutine(WipeScreen(-wipeSpeed, 1, 0));
-		started = true;
-	}
 	public IEnumerator WipeScreen(float rate, float start, float goal)
 	{
 		//simpleBlit.TransitionMaterial = transitions[Random.Range(0, transitions.Length - 1)];
