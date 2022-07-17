@@ -6,7 +6,7 @@ public class PlayerObject : SmartObject
 {
 	public PlayerController playerController;
 	[HideInInspector]
-	//public PartyElement PartyElement;
+	public PartyElement PartyElement;
 	public int PlayerPosition;
 	public float lerpTime;
 
@@ -18,11 +18,14 @@ public class PlayerObject : SmartObject
 		stateMachine.StartMachine(states);
 		PlayerManager.current.Party[PlayerPosition] = this;
 		PlayerManager.current.StaticParty[PlayerPosition] = this;
+
 		PartyElement = UIManager.current.PartyElements[PlayerPosition];
 		PartyElement.label.text = job.jobName;
 		PartyElement.SetMaxHealth(stats.maxHP);
 		PartyElement.UpdateHealth(stats.HP);
+
 		playerController.started = true;
+
 	}
 
 	public override void ObjectUpdate()
@@ -175,9 +178,12 @@ public class PlayerObject : SmartObject
 		spriteRenderer.sprite = job.sprite;
 		anim.runtimeAnimatorController = job.animator;
 
+
 		PartyElement.label.text = job.jobName;
 		PartyElement.SetMaxHealth(stats.maxHP);
 		PartyElement.UpdateHealth(stats.HP);
+
+
 		stateMachine.ChangeState(StateEnums.Idle);
 	}
 
