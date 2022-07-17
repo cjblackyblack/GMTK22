@@ -9,20 +9,52 @@ public class EnemyConfig {
     public GameObject prefab;
     public int maxNumber;
     public int currentNumber;
-    public float amountScale;
+
+    public int spawnAmount;
+    public int spawnDC;
+    public int minRound;
+    public float maxAmountScale;
+    public float spawnAmountScale;
+
+    public float spawnTimer;
+
+    public float maxTimer;
 }
 public class EnemyManager : MonoBehaviour {
 
+
     public static EnemyManager enemyManager => FindObjectOfType<EnemyManager>();
     public EnemyConfig[] enemies;
-    public Dictionary<EnemyTypes, EnemyConfig> enemyDict;
-    
+    bool enemyDictInit = false;
+    Dictionary<EnemyTypes, EnemyConfig> _enemyDict;
+    public Dictionary<EnemyTypes, EnemyConfig> enemyDict {
+        get{
+            if(!enemyDictInit){
+                enemyDictInit = true;
+                _enemyDict = new Dictionary<EnemyTypes, EnemyConfig>();
+                foreach(EnemyConfig c in enemies){
+            _enemyDict.Add(c.type, c);
+        }
 
+            }
+            return _enemyDict;
+        }
+    }
+    public int globalEnemyMax;
+    public float globalEnemySpawnDelay;
+    public int roundsPerDifficultyIncrease;
     public int effectiveMax(EnemyTypes type) {
-        return enemyDict[type].maxNumber + Mathf.FloorToInt(enemyDict[type].amountScale*Mathf.FloorToInt(GameManager.current.round/3));
+        return enemyDict[type].maxNumber + Mathf.FloorToInt(enemyDict[type].maxAmountScale*Mathf.FloorToInt(GameManager.current.round/roundsPerDifficultyIncrease));
+    }
+
+
+
+    public int effectiveAmount(EnemyTypes type){
+        return enemyDict[type].spawnAmount + Mathf.FloorToInt(enemyDict[type].spawnAmountScale*Mathf.FloorToInt(GameManager.current.round/roundsPerDifficultyIncrease));
     }
     public Transform wizardPoints;
     public PointConfig[] ninjaPoints;
+    
     public Vector2 xBound, zBound;
     Vector3[] grassPositions;
     Vector3[] ninjaPositions;
@@ -32,9 +64,36 @@ public class EnemyManager : MonoBehaviour {
         for(int i = 0; i < grassPositions.Length; ++i){
             grassPositions[i] = ts[i].position;
         }
-        enemyDict=new Dictionary<EnemyTypes, EnemyConfig>();
+    }
+
+    void FixedUpdate(){
+        int curTotalEnemies = 0;
+        List<EnemyTypes> ready = new List<EnemyTypes>();
+        float deltaTime = Time.fixedDeltaTime;
         foreach(EnemyConfig c in enemies){
-            enemyDict.Add(c.type, c);
+            EnemyConfig o = enemyDict[c.type];
+            o.spawnTimer -= deltaTime;
+            curTotalEnemies += o.currentNumber;
+            if(o.spawnTimer < 0){
+                ready.Add(c.type);
+                o.spawnTimer = o.maxTimer;
+            }
+        }
+
+        foreach(EnemyTypes t in ready){
+            EnemyConfig o = enemyDict[t];
+            
+            if(StateMachine.RollDice > o.spawnDC &&
+               o.currentNumber + effectiveAmount(t) < effectiveMax(t) &&
+               curTotalEnemies + effectiveAmount(t) < globalEnemyMax){
+                SpawnPoint sp = SpawnPoint.GetRandomAwayFromPlayer(t);
+                if(sp)
+                {
+                    for(int i = 0; i < effectiveAmount(t); ++i){
+                        sp.SetEnemySpawn(globalEnemySpawnDelay);
+                    }
+                }
+               }
         }
     }
 

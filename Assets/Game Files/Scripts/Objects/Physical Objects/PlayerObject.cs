@@ -6,7 +6,7 @@ public class PlayerObject : SmartObject
 {
 	public PlayerController playerController;
 	[HideInInspector]
-	//public PartyElement PartyElement;
+	public PartyElement PartyElement;
 	public int PlayerPosition;
 	public float lerpTime;
 
