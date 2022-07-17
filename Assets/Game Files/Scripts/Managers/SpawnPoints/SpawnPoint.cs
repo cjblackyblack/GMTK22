@@ -34,7 +34,7 @@ public static Dictionary<EnemyTypes,List<SpawnPoint>> _spawnPoints = null;
         }
         totalPos /= PlayerManager.current.Party.Length;
         totalPos.y=1;
-        List<SpawnPoint> set = spawnPoints[enemyType];
+        List<SpawnPoint> set = EnemyManager.enemyManager.spDict[enemyType];
         if(set.Count == 0){
             return null;
         }
@@ -49,13 +49,14 @@ public static Dictionary<EnemyTypes,List<SpawnPoint>> _spawnPoints = null;
             }
             
         }
+        if(set.Count > 1)
         set.RemoveAt(worst);
         return set[UnityEngine.Random.Range(0,set.Count)];
     }
 
 
-    void Awake(){
-        if(type == SpawnPointTypes.ONAWAKE){
+    void Start(){
+        /*if(type == SpawnPointTypes.ONAWAKE){
             Instantiate(EnemyManager.enemyManager.enemyDict[enemyType].prefab, tform.position, Quaternion.identity);
         }
         else{
@@ -63,7 +64,7 @@ public static Dictionary<EnemyTypes,List<SpawnPoint>> _spawnPoints = null;
             spawnPoints.Add(enemyType,new List<SpawnPoint>());
         }
         spawnPoints[enemyType].Add(this);
-        }
+        }*/
     }
 
     public bool spawnOnStart;

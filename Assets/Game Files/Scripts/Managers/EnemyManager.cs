@@ -29,7 +29,10 @@ public class EnemyManager : MonoBehaviour
     public static EnemyManager enemyManager => FindObjectOfType<EnemyManager>();
     public EnemyConfig[] enemies;
     bool enemyDictInit = false;
+    bool spDictInit = false;
     Dictionary<EnemyTypes, EnemyConfig> _enemyDict;
+
+    Dictionary<EnemyTypes, List<SpawnPoint>> _spDict = null;
     public Dictionary<EnemyTypes, EnemyConfig> enemyDict
     {
         get
@@ -45,6 +48,37 @@ public class EnemyManager : MonoBehaviour
 
             }
             return _enemyDict;
+        }
+    }
+
+    public Dictionary<EnemyTypes, List<SpawnPoint>> spDict
+    {
+        get
+        {
+            if (!spDictInit)
+            {
+                spDictInit = true;
+                _spDict = new Dictionary<EnemyTypes, List<SpawnPoint>>();
+
+                SpawnPoint[] sps = FindObjectsOfType<SpawnPoint>();
+                foreach (SpawnPoint sp in sps)
+                {
+                    if (sp.type == SpawnPointTypes.ONAWAKE)
+                    {
+                        Instantiate(enemyDict[sp.enemyType].prefab, sp.tform.position, Quaternion.identity);
+
+                    }
+                    else
+                    {
+                        if (!_spDict.ContainsKey(sp.enemyType))
+                        {
+                            _spDict.Add(sp.enemyType, new List<SpawnPoint>());
+                        }
+                        _spDict[sp.enemyType].Add(sp);
+                    }
+                }
+            }
+            return _spDict;
         }
     }
     public int globalEnemyMax;
