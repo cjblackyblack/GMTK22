@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6458015594655456526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.80444264, y: 1.86, z: 5.72849}
-  m_LocalScale: {x: 0.35292017, y: 0.35292017, z: 0.35292017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6458015594804489624}
@@ -76,7 +76,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   friction: 1
   local: 0
-  entryState: {fileID: 11400000, guid: f0040a771a86d8a4cbb5a266b854a569, type: 2}
+  entryState: {fileID: 11400000, guid: 85a1fdd78768a43488e437a3b66d26f2, type: 2}
   origin: {fileID: 0}
   target: {fileID: 0}
   inputDir: {x: 1, y: 1}
@@ -123,7 +123,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6458015594804489625
 GameObject:
@@ -178,7 +178,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8676f67164849d74f9f971fd1914c828, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -199,8 +199,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.9433962, g: 0.65187496, b: 0.07564971, a: 1}
+  m_Sprite: {fileID: -2091848782, guid: b803d4677d8825c4d85fe40faee55441, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -220,7 +220,7 @@ Animator:
   m_GameObject: {fileID: 6458015594804489625}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c99fc712244c14240b4b009eed2d6f8f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

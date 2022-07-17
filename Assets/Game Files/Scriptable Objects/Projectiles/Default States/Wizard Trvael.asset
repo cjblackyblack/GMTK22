@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4657c58bab062c4c8cc7a696f7c0970, type: 3}
-  m_Name: Travel State
+  m_Name: Wizard Trvael
   m_EditorClassIdentifier: 
-  maxTime: 30
+  maxTime: 12
   exitState: {fileID: 11400000, guid: 6c10304cdec7f474aacd74d6f19fe5ee, type: 2}
   statusEffects: []
   forwardMovement:
@@ -20,7 +20,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 5
+      value: 3
       inSlope: 0
       outSlope: 0
       tangentMode: 34
@@ -29,7 +29,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 50
-      value: 5
+      value: 3
       inSlope: 0
       outSlope: 0
       tangentMode: 34

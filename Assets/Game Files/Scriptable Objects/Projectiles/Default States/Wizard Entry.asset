@@ -9,18 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4657c58bab062c4c8cc7a696f7c0970, type: 3}
-  m_Name: Travel State
+  m_Script: {fileID: 11500000, guid: 6d9373ccf24812f40ab8cf1aee5b1a31, type: 3}
+  m_Name: Wizard Entry
   m_EditorClassIdentifier: 
-  maxTime: 30
-  exitState: {fileID: 11400000, guid: 6c10304cdec7f474aacd74d6f19fe5ee, type: 2}
-  statusEffects: []
+  maxTime: 2
+  travelState: {fileID: 11400000, guid: 71afc18123b7fcf40af7ee218a67a6e7, type: 2}
   forwardMovement:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 5
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 34
@@ -28,8 +27,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 50
-      value: 5
+      time: 1
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 34
@@ -87,33 +86,3 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  iframes: {x: 0, y: 0}
-  armorFrames: {x: 0, y: 0}
-  guardFrames: {x: 0, y: 0}
-  armorPierce: 0
-  ignoreProtections: 0
-  hitParticles: []
-  particleEffects: []
-  particleTime: 
-  particlePos: []
-  sfxTime: 
-  sfxClip: []
-  sfxVolume: []
-  hitSFX: []
-  hitboxTime:
-  - {x: 0, y: 90}
-  multihitTime: 00000000
-  hitboxPos:
-  - {x: 0, y: 0, z: 0}
-  hitboxSize:
-  - 0.45
-  hitboxDamage:
-  - 1
-  useMagic: 1
-  flatDamage: 0
-  hitboxKnockbackDir:
-  - {x: 0, y: 1}
-  knockbackStrength:
-  - 2
-  hitboxStun: 41000000
-  hitStopTime: 0
