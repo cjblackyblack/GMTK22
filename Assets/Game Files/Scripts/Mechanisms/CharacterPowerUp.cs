@@ -5,6 +5,11 @@ using UnityEngine;
 public class CharacterPowerUp : MonoBehaviour
 {
 	public bool used;
+
+	private void Start()
+	{
+		GetComponent<MeshRenderer>().enabled = false;
+	}
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.GetComponent<PlayerObject>() && !used)

@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1394b1bd13b4704e969a420314cf262, type: 3}
-  m_Name: Exit State
+  m_Name: Small Exit State
   m_EditorClassIdentifier: 
-  interuptable: 0
-  maxTime: 10
+  maxTime: 1
+  AllyFX: {fileID: 6949878384420966489, guid: ea4fd13014a1ae248a933f313ba3453a, type: 3}
+  EnemyFX: {fileID: 6949878384420966489, guid: 49d3160235cab7f45beca52f0d0ae8e8, type: 3}

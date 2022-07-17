@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d32cbfd5eb8f6924580048ba2da9de5a
+guid: f29e509d47dae624f8e648564baa0e6e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ExplosionSheet1_0
+      name: BulletHit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 18
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b0c5bb825ef8a6428e454a22f835cb7
-      internalID: -627765175
+      spriteID: 995cd7a28d3543347914ff08dc8af44a
+      internalID: 612889307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ExplosionSheet1_1
+      name: BulletHit_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 18
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bb718b0aed43f64196f87305ea84280
-      internalID: -493741628
+      spriteID: d279b26b0c67fa748bc8ea8043c685b0
+      internalID: 1920634461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ExplosionSheet1_2
+      name: BulletHit_2
       rect:
         serializedVersion: 2
-        x: 36
+        x: 32
         y: 0
-        width: 18
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f00dd8c41668134ea1ea3acfb4de87d
-      internalID: -317655981
+      spriteID: 8c7140624bd768e498aab7d94003133e
+      internalID: 630265765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ExplosionSheet1_3
+      name: BulletHit_3
       rect:
         serializedVersion: 2
-        x: 54
+        x: 48
         y: 0
-        width: 18
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,50 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6e6534ac61adfa4c8bfe045ad15f8e6
-      internalID: 1275261305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ExplosionSheet1_4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff6e3b4afea46f3439ae5368d10cb9ef
-      internalID: -930339485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ExplosionSheet1_5
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 0
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68de3e1c7e60986419644914fedaa6ee
-      internalID: -1495480690
+      spriteID: 529852d8710a01d4b8b72dbeb0a25470
+      internalID: -1824503174
       vertices: []
       indices: 
       edges: []
@@ -252,12 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ExplosionSheet1_4: -930339485
-      ExplosionSheet1_5: -1495480690
-      ExplosionSheet1_1: -493741628
-      ExplosionSheet1_0: -627765175
-      ExplosionSheet1_3: 1275261305
-      ExplosionSheet1_2: -317655981
+      BulletHit_0: 612889307
+      BulletHit_1: 1920634461
+      BulletHit_3: -1824503174
+      BulletHit_2: 630265765
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
