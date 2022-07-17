@@ -24,6 +24,9 @@ public class SmartObject : PhysicalObject
 	public Vector3 targetPos;
 	[HideInInspector]
 	public Vector3 hurtPos;
+
+	public SpriteRenderer spriteShadow => transform.GetChild(1).GetComponent<SpriteRenderer>();
+
 Transform _tform = null;
     public Transform tform {
         get{
@@ -47,7 +50,7 @@ Transform _tform = null;
 
 	private void Update()
 	{
-
+		spriteShadow.sprite = spriteRenderer.sprite;
 		inputDir = (_inputDir.Rotate(statMods.inputMod)).ConvertVector2();
 		stateMachine.OnUpdate();
 	}
