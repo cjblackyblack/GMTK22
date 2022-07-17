@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d291b6d78916534d9ddecd4ae697cc8, type: 3}
+  m_Name: Wizard Attack State
+  m_EditorClassIdentifier: 
+  interuptable: 1
+  attackName: Attack
+  maxTime: 90
+  strafeMultiplier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  moveSpeed: 0
+  forwardMovement:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  verticalMovement:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  strafeMovement:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  statusEffects: []
+  iframes: {x: 0, y: 0}
+  armorFrames: {x: 0, y: 0}
+  guardFrames: {x: 0, y: 0}
+  armorPierce: 0
+  ignoreProtections: 0
+  hitParticles: []
+  particleEffects: []
+  particleTime: 
+  particlePos: []
+  sfxTime: 
+  sfxClip: []
+  sfxVolume: []
+  hitSFX: []
+  hitboxTime: []
+  multihitTime: 
+  hitboxPos: []
+  hitboxSize: []
+  hitboxDamage: []
+  useMagic: 0
+  flatDamage: 0
+  hitboxKnockbackDir: []
+  knockbackStrength: []
+  hitboxStun: 0a000000
+  hitStopTime: 0
+  projectiles:
+  - {fileID: 6458015594655456526, guid: 2bb5efcc783528c40b913a8de1b6d08e, type: 3}
+  - {fileID: 6458015594655456526, guid: 2bb5efcc783528c40b913a8de1b6d08e, type: 3}
+  projectileTime: 0a00000014000000
+  projectilePos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  targetAlliance: 2

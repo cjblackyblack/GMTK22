@@ -5,11 +5,24 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
     public SmartObject smartObject => GetComponent<SmartObject>();
-
+    public static int RollDice {
+        get{
+            return UnityEngine.Random.Range(0,6);
+        }
+    }
     public Dictionary<StateEnums, SmartState> stateDictionary;
     public StateEnums currentStateEnum;
     public SmartState currentState;
     public SmartState previousState;
+
+    public int playerTargetMem;
+    public int randomIntMem;
+
+    public int savedTime;
+
+    public Vector2 dirMem;
+
+    public PointConfig pointMem;
 
     bool busyChange;
 
