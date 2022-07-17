@@ -183,7 +183,7 @@ MonoBehaviour:
     HP: 1
     maxHP: 6
     moveSpeed: 10
-    scoreValue: 0
+    scoreValue: 1200
   statMods:
     maxHPMod: 1
     damageMod: 1
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStateEnum: 0
+  previousStateEnum: 0
   currentState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
   previousState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
   playerTargetMem: 0

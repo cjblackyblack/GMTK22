@@ -183,7 +183,7 @@ MonoBehaviour:
     HP: 1
     maxHP: 0
     moveSpeed: 10
-    scoreValue: 0
+    scoreValue: 1
   statMods:
     maxHPMod: 1
     damageMod: 1
