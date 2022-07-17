@@ -203,7 +203,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18980f6b952822a469f61c3df99a80dc, type: 2}
   - {fileID: 11400000, guid: 6f2e06f683512e24c85bfb0590c8140c, type: 2}
   - {fileID: 11400000, guid: 4f3bb058d2ee899488f285c27f5f639c, type: 2}
-  - {fileID: 11400000, guid: d3980caca7fb6b74ca9b46e8443a0032, type: 2}
+  - {fileID: 11400000, guid: 9453ee55aeb66174f91dc74fb53f2e3b, type: 2}
   facingDir: {x: 1, y: 0}
   _inputDir: {x: 0, y: 0}
   inputDir: {x: 0, y: 0, z: 0}
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStateEnum: 0
+  previousStateEnum: 0
   currentState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
   previousState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
   playerTargetMem: 0

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e1b20220ad74ab4abf1412683476272, type: 3}
-  m_Name: Dead
+  m_Name: Dad Dead
   m_EditorClassIdentifier: 
   interuptable: 0
   maxTime: 240
   deadFX: {fileID: 0}
   powerUpPrefab: {fileID: 3214702577333566378, guid: 4b813b5efd2a79d42bf5acfae4f2552f, type: 3}
-  powerUpDC: 18
+  powerUpDC: 13
