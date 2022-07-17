@@ -188,9 +188,10 @@ public class GameManager : MonoBehaviour
 			Debug.Log("starting");
 			if (SceneManager.GetActiveScene().name == "End") //hack because we don't yet know what number the final scene is
 			{
-				StartCoroutine(FadeMusic(audioFadeSpeed, 0, 1));
+
 				BGMSource.clip = MenuTheme;
 				BGMSource.Play();
+				StartCoroutine(FadeMusic(audioFadeSpeed, 0, 1));
 			}
 			else
 				switch (scene)
