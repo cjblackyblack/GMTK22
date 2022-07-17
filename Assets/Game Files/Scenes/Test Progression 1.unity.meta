@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game Files/Scripts/Object Machines/Smart Machine/Bomber/BomberA.meta
+guid: 33c35b14fa836234eab8147fd676623f
+========
 guid: 9852d58f521ac0944a4ed52b31f87043
+>>>>>>>> a2bf53f480b979f10d666af120866006b6818faf:Assets/Game Files/Scenes/Sandbox 3.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

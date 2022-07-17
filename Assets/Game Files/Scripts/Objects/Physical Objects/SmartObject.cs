@@ -25,6 +25,8 @@ public class SmartObject : PhysicalObject
 	[HideInInspector]
 	public Vector3 hurtPos;
 
+	public Transform tform=>transform;
+
 	public bool drawHitboxes;
 	public void Start()
 	{

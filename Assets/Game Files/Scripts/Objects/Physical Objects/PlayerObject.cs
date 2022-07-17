@@ -6,7 +6,7 @@ public class PlayerObject : SmartObject
 {
 	public PlayerController playerController;
 	[HideInInspector]
-	public PartyElement PartyElement;
+	//public PartyElement PartyElement;
 	public int PlayerPosition;
 	public float lerpTime;
 
@@ -142,7 +142,7 @@ public class PlayerObject : SmartObject
 		{
 			stateMachine.ChangeState(StateEnums.Idle);
 		}
-		PartyElement.UpdateHealth(stats.HP);
+		//PartyElement.UpdateHealth(stats.HP);
 		return properties.objectTangibility;
 	}
 

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4657c58bab062c4c8cc7a696f7c0970, type: 3}
+  m_Name: New Default Projectile Travel State
+  m_EditorClassIdentifier: 
+  maxTime: 0
+  exitState: {fileID: 0}
+  statusEffects: []
+  forwardMovement:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  verticalMovement:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  strafeMovement:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  iframes: {x: 0, y: 0}
+  armorFrames: {x: 0, y: 0}
+  guardFrames: {x: 0, y: 0}
+  armorPierce: 0
+  ignoreProtections: 0
+  hitParticles: []
+  particleEffects: []
+  particleTime: 
+  particlePos: []
+  sfxTime: 
+  sfxClip: []
+  sfxVolume: []
+  hitSFX: []
+  hitboxTime: []
+  multihitTime: 
+  hitboxPos: []
+  hitboxSize: []
+  hitboxDamage: []
+  useMagic: 0
+  flatDamage: 0
+  hitboxKnockbackDir: []
+  knockbackStrength: []
+  hitboxStun: 
+  hitStopTime: 0
