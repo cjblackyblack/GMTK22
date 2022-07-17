@@ -53,21 +53,14 @@ MonoBehaviour:
   properties:
     baseTangibility: 0
     objectTangibility: 0
-    chemistryMaterial: 0
-    chemistryState: 0
-    weaknesses: 05000000
-    resistances: 04000000
-    immunities: 
     alliance: 2
     baseAlliance: 2
-    priority: 0
-    name: Fireball
   stats:
     scaledTime: 1
     HP: 1
     maxHP: 1
     moveSpeed: 1
-    actionSpeed: {x: 0, y: 0}
+    scoreValue: 0
   statMods:
     maxHPMod: 1
     damageMod: 1
@@ -77,12 +70,10 @@ MonoBehaviour:
     inputMod: 0
   hittable:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 65
   activeTime: 0
   currentTime: 0
   velocity: {x: 0, y: 0, z: 0}
-  gravity: 0
-  terminalYVel: 0
   friction: 1
   local: 0
   entryState: {fileID: 11400000, guid: f0040a771a86d8a4cbb5a266b854a569, type: 2}
