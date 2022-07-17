@@ -13,7 +13,8 @@ public class PlayerManager : MonoBehaviour
 	public int[] buttonReleaseBuffer;
 
 	public SmartObject[] Party = new SmartObject[3];
-	public SmartObject PartyLeader;
+	public SmartObject[] StaticParty = new PlayerObject[3];
+	public int[] storedHP = new int[3];
 
 	public int currentFormation;
 	public PlayerFormations[] PlayerFormations;

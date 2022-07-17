@@ -39,12 +39,14 @@ public class SmartObject : PhysicalObject
 
 	private void Update()
 	{
+
 		inputDir = (_inputDir.Rotate(statMods.inputMod)).ConvertVector2();
 		stateMachine.OnUpdate();
 	}
 
 	private void FixedUpdate()
 	{
+
 		activeTime += (stats.scaledTime * statMods.timeMod);
 		if (activeTime - currentTime >= 1)
 		{
@@ -142,10 +144,19 @@ public class SmartObject : PhysicalObject
 
 	}
 
-	public void SetStats(bool setActions)
+	public virtual void SetJob(CharacterJob newJob, bool restoreHP)
+	{
+		job = newJob;
+		SetStats(restoreHP);
+	}
+
+	public void SetStats(bool restoreHP)
 	{
 		if (!job) return;
 		//SET STATS HERE
+		stats.maxHP = job.jobStats.maxHP;
+		if (restoreHP)
+			stats.HP = stats.maxHP;
 		spriteRenderer.sprite = job.sprite;
 		anim.runtimeAnimatorController = job.animator;
 	}
@@ -174,9 +185,6 @@ public class SmartObject : PhysicalObject
 
 	private void OnValidate()
 	{
-		if (!Application.isPlaying)
-			SetStats(true);
-		else
-			SetStats(false);
+		SetStats(false);
 	}
 }

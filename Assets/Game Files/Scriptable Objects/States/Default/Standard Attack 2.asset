@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Standard Attack 2
   m_EditorClassIdentifier: 
   interuptable: 0
-  distanceRange: {x: 1.5, y: 3}
-  actionProperties: 
   attackName: Attack
   maxTime: 80
   strafeMultiplier:
@@ -136,7 +134,7 @@ MonoBehaviour:
   hitboxSize:
   - 0.5
   hitboxDamage:
-  - 1.5
+  - 1
   useMagic: 0
   flatDamage: 0
   hitboxKnockbackDir:
@@ -148,3 +146,4 @@ MonoBehaviour:
   projectiles: []
   projectileTime: 
   projectilePos: []
+  targetAlliance: 0

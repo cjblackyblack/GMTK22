@@ -16,39 +16,6 @@ MonoBehaviour:
   SpecialAttack: {fileID: 11400000, guid: a5d69f73891fb2f4d81dddbc5891297b, type: 2}
   jobName: Thief
   jobStats:
-    maxHP:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 14
-        inSlope: 4.278729
-        outSlope: 4.278729
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.1175446
-      - serializedVersion: 3
-        time: 50
-        value: 318.67422
-        inSlope: 3.8972924
-        outSlope: 3.8972924
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.118854895
-      - serializedVersion: 3
-        time: 100
-        value: 699.3733
-        inSlope: 7.6139812
-        outSlope: 7.6139812
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  jobGambits: []
+    maxHP: 8
   animator: {fileID: 9100000, guid: e6c2c7e6c9422a941b5936b0f4770b65, type: 2}
   sprite: {fileID: 2759625832949664974, guid: df9d7bcc268b48340af4c010e59cb2af, type: 3}

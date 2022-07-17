@@ -16,29 +16,6 @@ MonoBehaviour:
   SpecialAttack: {fileID: 0}
   jobName: White Mage
   jobStats:
-    maxHP:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 10
-        inSlope: 4.375386
-        outSlope: 4.375386
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.0636574
-      - serializedVersion: 3
-        time: 100
-        value: 800
-        inSlope: 7.9
-        outSlope: 7.9
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
+    maxHP: 6
   animator: {fileID: 9100000, guid: 9c928bf3a96af0a42be152ce886f7c6a, type: 2}
   sprite: {fileID: -1492914945810849797, guid: 5825ecfddcf052c4981428cdb18af2e9, type: 3}

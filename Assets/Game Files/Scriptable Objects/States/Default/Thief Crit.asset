@@ -137,8 +137,8 @@ MonoBehaviour:
   - 0.35
   - 0.35
   hitboxDamage:
-  - 0.5
-  - 1.6
+  - 1
+  - 1
   useMagic: 0
   flatDamage: 1
   hitboxKnockbackDir:
