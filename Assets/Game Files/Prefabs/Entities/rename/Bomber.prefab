@@ -177,7 +177,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   hurtPos: {x: 0, y: 0, z: 0}
   drawHitboxes: 0
-  type: 0
+  type: 3
   flyCurve:
     serializedVersion: 2
     m_Curve:

@@ -80,9 +80,9 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   friction: 0.9
   states:
-  - {fileID: 11400000, guid: bda8eed8854a8a04fb80353af38072d4, type: 2}
-  - {fileID: 11400000, guid: caa7f0d559785f04a9410ae87e2455e7, type: 2}
-  - {fileID: 11400000, guid: 10d12def376c83c47b1431e62b7ac8cb, type: 2}
+  - {fileID: 11400000, guid: 93d106f541f85734f890c42df054c9fd, type: 2}
+  - {fileID: 11400000, guid: 219dc275ccc71774e90c0cd9dfafc2c0, type: 2}
+  - {fileID: 11400000, guid: 0dad341c76e55ee4a879a7891b2dbabe, type: 2}
   - {fileID: 11400000, guid: 4f3bb058d2ee899488f285c27f5f639c, type: 2}
   - {fileID: 11400000, guid: d3980caca7fb6b74ca9b46e8443a0032, type: 2}
   facingDir: {x: 1, y: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   hurtPos: {x: 0, y: 0, z: 0}
   drawHitboxes: 0
-  type: 0
+  type: 2
   flyCurve:
     serializedVersion: 2
     m_Curve:

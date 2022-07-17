@@ -12,8 +12,10 @@ public class StateMachine : MonoBehaviour
     }
     public Dictionary<StateEnums, SmartState> stateDictionary;
     public StateEnums currentStateEnum;
+    public StateEnums previousStateEnum;
     public SmartState currentState;
     public SmartState previousState;
+
 
     public int playerTargetMem;
     public int randomIntMem;
@@ -37,6 +39,7 @@ public class StateMachine : MonoBehaviour
         }
 
         previousState = stateDictionary[StateEnums.Idle];
+        previousStateEnum = StateEnums.Idle;
         currentState = stateDictionary[StateEnums.Idle];
         ChangeState(StateEnums.Idle);
     }
@@ -76,6 +79,7 @@ public class StateMachine : MonoBehaviour
         currentState = stateDictionary[newState];
         currentState.OnEnter(smartObject);
         smartObject.OnStateChange?.Invoke(smartObject, newState);
+        previousStateEnum = currentStateEnum;
         currentStateEnum = newState;
         //yield return new WaitForFixedUpdate();
         busyChange = false;
@@ -89,6 +93,7 @@ public class StateMachine : MonoBehaviour
         smartObject.OnStateChangeOverride?.Invoke(smartObject, newState);
         currentState = newState;
         currentState.OnEnter(smartObject);
+        previousStateEnum = currentStateEnum;
         currentStateEnum = StateEnums.Action;
 
        

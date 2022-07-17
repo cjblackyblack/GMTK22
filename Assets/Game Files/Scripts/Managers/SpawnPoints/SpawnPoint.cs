@@ -35,9 +35,12 @@ public static Dictionary<EnemyTypes,List<SpawnPoint>> _spawnPoints = null;
         totalPos /= PlayerManager.current.Party.Length;
         totalPos.y=1;
         List<SpawnPoint> set = spawnPoints[enemyType];
-        int worst = -1;
-        float worstd = float.PositiveInfinity;
-        for(int i = 0; i < set.Count; ++i){
+        if(set.Count == 0){
+            return null;
+        }
+        int worst = 0;
+        float worstd = Vector3.Distance(set[0].tform.position, totalPos);
+        for(int i = 1; i < set.Count; ++i){
             
             float cd = Vector3.Distance(set[i].tform.position, totalPos);
             if(cd < worstd){

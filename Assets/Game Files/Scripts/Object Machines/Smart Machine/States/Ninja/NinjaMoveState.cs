@@ -48,7 +48,7 @@ public class NinjaMoveState : SmartState {
 
 	public override void HandleState(SmartObject smartObject)
 	{
-        if(Vector3.Distance(smartObject.stateMachine.pointMem.point.position,smartObject.tform.position) < 1){
+        if(Vector3.Distance(smartObject.stateMachine.pointMem.point.position,smartObject.tform.position) < 2){
             smartObject.stateMachine.savedTime = -1;
             smartObject.stateMachine.ChangeState(StateEnums.Move);
         }

@@ -18,7 +18,7 @@ public class WizardIdleState : SmartState {
     {
         if(smartObject.currentTime > attackDelayFrames){
             
-            smartObject.stateMachine.ChangeState(StateEnums.Action);
+            smartObject.stateMachine.ChangeState(smartObject.stateMachine.previousStateEnum == StateEnums.Move ? StateEnums.Action : StateEnums.Move);
         }
     }
 
