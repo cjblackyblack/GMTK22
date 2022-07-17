@@ -26,6 +26,7 @@ public static Dictionary<EnemyTypes,List<SpawnPoint>> _spawnPoints = null;
             return _tform;
         }
     }
+
     public static SpawnPoint GetRandomAwayFromPlayer(EnemyTypes enemyType){
         Vector3 totalPos = Vector3.zero;
         foreach(SmartObject so in PlayerManager.current.Party){

@@ -19,11 +19,22 @@ public class DeadState : SmartState
 		smartObject.properties.objectTangibility = PhysicalObjectTangibility.Intangible;
 
 		smartObject.anim.Play("Dead", 0, 0);
+
 		if(powerUpPrefab && StateMachine.RollD20 > powerUpDC)
 		{
 			Instantiate(powerUpPrefab, smartObject.tform.position, Quaternion.identity);
 		}
 		if (deadFX != null)
 			Instantiate(deadFX, smartObject.transform.position, Quaternion.identity);
+	}
+
+	public override void OnFixedUpdate(SmartObject smartObject)
+	{
+		base.OnFixedUpdate(smartObject);
+		if (smartObject.currentTime > 60)
+		{
+			smartObject.currentTime = 0;
+			smartObject.anim.Play("Dead", 0, 1);
+		}
 	}
 }

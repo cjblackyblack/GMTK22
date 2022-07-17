@@ -13,6 +13,7 @@ public class DefaultProjectileExitState : ProjectileState
 		{
 			Instantiate(AllyFX, projectileObject.transform.position, projectileObject.transform.rotation);
 		}
+		projectileObject.spriteRenderer.enabled = false;
 	}
 
 	public override void OnUpdate(ProjectileObject projectileObject)
