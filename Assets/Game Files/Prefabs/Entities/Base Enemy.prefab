@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStateEnum: 0
+  previousStateEnum: 0
   currentState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
   previousState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
   playerTargetMem: 0
@@ -293,7 +294,7 @@ AudioSource:
   m_GameObject: {fileID: 2298750644882956081}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 935521695c6c5d24584b88a7a1dd4e54, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

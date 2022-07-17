@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterPowerUp : MonoBehaviour
 {
 	public bool used;
-
+	public GameObject FX;
 	private void Start()
 	{
 		GetComponent<MeshRenderer>().enabled = false;
@@ -30,6 +30,7 @@ public class CharacterPowerUp : MonoBehaviour
 					}
 					GameManager.current.CurrentJobs[i] = randomJob;
 					other.GetComponent<PlayerObject>().SetJob(randomJob, true);
+					Instantiate(FX, other.transform.position, other.transform.rotation);
 					StartCoroutine(DestroyBehaviour());
 				}
 			}
