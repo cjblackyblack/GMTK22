@@ -82,7 +82,7 @@ MonoBehaviour:
   inputDir: {x: 1, y: 1}
   drawHitboxes: 1
   targetAlliance: 2
-  hitCount: 2
+  hitCount: 1
 --- !u!114 &6458015594655456525
 MonoBehaviour:
   m_ObjectHideFlags: 0

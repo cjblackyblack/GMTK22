@@ -186,8 +186,8 @@ MonoBehaviour:
   target: {fileID: 0}
   inputDir: {x: 1, y: 1}
   drawHitboxes: 1
-  targetAlliance: 0
-  hitCount: 2
+  targetAlliance: 4
+  hitCount: 5
 --- !u!114 &8268300688291075647
 MonoBehaviour:
   m_ObjectHideFlags: 0

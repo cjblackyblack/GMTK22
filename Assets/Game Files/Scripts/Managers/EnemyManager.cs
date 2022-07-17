@@ -135,6 +135,7 @@ public class EnemyManager : MonoBehaviour
             EnemyConfig o = enemyDict[t];
 
             if (StateMachine.RollDice > o.spawnDC &&
+               o.minRound <= GameManager.current.round &&
                o.currentNumber + effectiveAmount(t) < effectiveMax(t) &&
                curTotalEnemies + effectiveAmount(t) < globalEnemyMax)
             {
