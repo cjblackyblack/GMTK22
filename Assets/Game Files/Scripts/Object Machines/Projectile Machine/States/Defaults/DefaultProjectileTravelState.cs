@@ -182,6 +182,11 @@ public class DefaultProjectileTravelState : ProjectileState
 
                         }
                     }
+                    else
+                    if(hitObject.gameObject.layer == LayerMask.NameToLayer("Default"))
+					{
+                        projectileObject.stateMachine.ChangeState(exitState);
+                    }
                 }
             }
         }

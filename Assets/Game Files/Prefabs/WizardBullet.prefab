@@ -60,6 +60,7 @@ MonoBehaviour:
     HP: 1
     maxHP: 1
     moveSpeed: 0.87
+    scoreValue: 0
   statMods:
     maxHPMod: 1
     damageMod: 1
@@ -69,7 +70,7 @@ MonoBehaviour:
     inputMod: 0
   hittable:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 65
   activeTime: 0
   currentTime: 0
   velocity: {x: 0, y: 0, z: 0}
