@@ -61,7 +61,7 @@ MonoBehaviour:
     baseAlliance: 1
   stats:
     scaledTime: 1
-    HP: 10
+    HP: 3
     maxHP: 8
     moveSpeed: 10
     scoreValue: 600
