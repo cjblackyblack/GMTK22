@@ -20,6 +20,7 @@ public class EnemyConfig {
 
     public float maxTimer;
 }
+[DefaultExecutionOrder(200)]
 public class EnemyManager : MonoBehaviour {
 
 
@@ -44,13 +45,13 @@ public class EnemyManager : MonoBehaviour {
     public float globalEnemySpawnDelay;
     public int roundsPerDifficultyIncrease;
     public int effectiveMax(EnemyTypes type) {
-        return enemyDict[type].maxNumber + Mathf.FloorToInt(enemyDict[type].maxAmountScale*Mathf.FloorToInt(GameManager.current.round/roundsPerDifficultyIncrease));
+        return enemyDict[type].maxNumber + Mathf.FloorToInt(enemyDict[type].maxAmountScale*Mathf.FloorToInt(GameManager.current.round/ roundsPerDifficultyIncrease < 1 ? 1 : roundsPerDifficultyIncrease));
     }
 
 
 
     public int effectiveAmount(EnemyTypes type){
-        return enemyDict[type].spawnAmount + Mathf.FloorToInt(enemyDict[type].spawnAmountScale*Mathf.FloorToInt(GameManager.current.round/roundsPerDifficultyIncrease));
+        return enemyDict[type].spawnAmount + Mathf.FloorToInt(enemyDict[type].spawnAmountScale*Mathf.FloorToInt(GameManager.current.round/(roundsPerDifficultyIncrease < 1 ? 1 : roundsPerDifficultyIncrease)));
     }
     public Transform wizardPoints;
     public PointConfig[] ninjaPoints;
@@ -67,6 +68,8 @@ public class EnemyManager : MonoBehaviour {
     }
 
     void FixedUpdate(){
+        if (!GameManager.current.started)
+            return;
         int curTotalEnemies = 0;
         List<EnemyTypes> ready = new List<EnemyTypes>();
         float deltaTime = Time.fixedDeltaTime;

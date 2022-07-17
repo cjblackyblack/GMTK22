@@ -255,7 +255,7 @@ public class AttackState : SmartState
     {
         for (int i = 0; i < sfxTime.Length; i++)
         {
-            if (smartObject.currentTime == sfxTime[i])
+            if (smartObject.currentTime == sfxTime[i] && sfxClip[i] != null)
             {
                 smartObject.audioSource.PlayOneShot(sfxClip[i], sfxVolume[i]);
             }

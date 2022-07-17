@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6468992371243593463}
   - component: {fileID: 6468992371243593462}
   - component: {fileID: 4310843165129792973}
-  - component: {fileID: 59954354118375973}
+  - component: {fileID: -6507734175493191401}
   m_Layer: 6
   m_Name: Ninja
   m_TagString: Untagged
@@ -200,7 +200,7 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!82 &59954354118375973
+--- !u!82 &-6507734175493191401
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

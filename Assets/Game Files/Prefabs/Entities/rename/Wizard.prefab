@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 3541307378570518185}
   - component: {fileID: 3541307378570518184}
   - component: {fileID: 5994303203246517651}
-  - component: {fileID: -7894460630324963075}
+  - component: {fileID: -2227010383506727863}
   m_Layer: 6
   m_Name: Wizard
   m_TagString: Untagged
@@ -319,7 +319,7 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!82 &-7894460630324963075
+--- !u!82 &-2227010383506727863
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

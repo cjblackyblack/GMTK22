@@ -18,11 +18,14 @@ public class PlayerObject : SmartObject
 		stateMachine.StartMachine(states);
 		PlayerManager.current.Party[PlayerPosition] = this;
 		PlayerManager.current.StaticParty[PlayerPosition] = this;
+
 		PartyElement = UIManager.current.PartyElements[PlayerPosition];
 		PartyElement.label.text = job.jobName;
 		PartyElement.SetMaxHealth(stats.maxHP);
 		PartyElement.UpdateHealth(stats.HP);
+
 		playerController.started = true;
+
 	}
 
 	public override void ObjectUpdate()
@@ -119,7 +122,7 @@ public class PlayerObject : SmartObject
 				return properties.objectTangibility;
 			OnStateChange?.Invoke(this, StateEnums.Hurt);
 		}
-
+		PartyElement.UpdateHealth(stats.HP);
 		stats.HP = Mathf.Clamp(stats.HP, 0, stats.maxHP);
 
 		for (int i = 0; i < PlayerManager.current.StaticParty.Length; i++)
@@ -175,9 +178,12 @@ public class PlayerObject : SmartObject
 		spriteRenderer.sprite = job.sprite;
 		anim.runtimeAnimatorController = job.animator;
 
+
 		PartyElement.label.text = job.jobName;
 		PartyElement.SetMaxHealth(stats.maxHP);
 		PartyElement.UpdateHealth(stats.HP);
+
+
 		stateMachine.ChangeState(StateEnums.Idle);
 	}
 

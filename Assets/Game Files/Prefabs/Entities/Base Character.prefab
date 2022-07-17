@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 3512754541347584672}
   - component: {fileID: 3512754541347584673}
   - component: {fileID: 1795573113534192432}
+  - component: {fileID: -5214810954072326368}
   m_Layer: 6
   m_Name: Base Character
   m_TagString: Untagged
@@ -179,9 +180,9 @@ MonoBehaviour:
   stats:
     scaledTime: 1
     HP: 10
-    maxHP: 10
+    maxHP: 6
     moveSpeed: 1
-    actionSpeed: {x: 100, y: 130}
+    scoreValue: 0
   statMods:
     maxHPMod: 1
     damageMod: 1
@@ -195,10 +196,7 @@ MonoBehaviour:
   activeTime: 0
   currentTime: 0
   velocity: {x: 0, y: 0, z: 0}
-  gravity: 0
-  terminalYVel: 0
   friction: 0.9
-  playerController: {fileID: 0}
   states:
   - {fileID: 11400000, guid: 3613729a9ea617747acba3b3159bd0f5, type: 2}
   - {fileID: 11400000, guid: 18980f6b952822a469f61c3df99a80dc, type: 2}
@@ -210,11 +208,9 @@ MonoBehaviour:
   inputDir: {x: 0, y: 0, z: 0}
   storedInput: {x: 0, y: 0}
   job: {fileID: 11400000, guid: ee0fe3f8a59e51d4eafa835bcaaa8145, type: 2}
-  drawHitboxes: 0
-  PlayerPosition: 0
-  lerpTime: 0
   targetPos: {x: 0, y: 0, z: 0}
   hurtPos: {x: 0, y: 0, z: 0}
+  drawHitboxes: 0
 --- !u!114 &3512754541347584675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +226,15 @@ MonoBehaviour:
   currentStateEnum: 0
   currentState: {fileID: 0}
   previousState: {fileID: 0}
+  playerTargetMem: 0
+  randomIntMem: 0
+  savedTime: 0
+  dirMem: {x: 0, y: 0}
+  pointMem:
+    point: {fileID: 0}
+    NinjaMove: {x: 0, y: 0}
+    NinjaShoot: {x: 0, y: 0}
+    BomberSpawnDir: {x: 0, y: 0}
 --- !u!54 &3512754541347584672
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -275,6 +280,102 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!82 &-5214810954072326368
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3512754541347584686}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3512754541845317294
 GameObject:
   m_ObjectHideFlags: 0

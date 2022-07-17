@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 3947239437434033104}
   - component: {fileID: 3947239437434033105}
   - component: {fileID: 6111985129075237098}
-  - component: {fileID: 1124075990601270436}
+  - component: {fileID: 6952294289832572503}
   m_Layer: 6
   m_Name: Pants Dad
   m_TagString: Untagged
@@ -319,7 +319,7 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!82 &1124075990601270436
+--- !u!82 &6952294289832572503
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
