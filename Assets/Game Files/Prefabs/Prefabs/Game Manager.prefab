@@ -46,7 +46,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -569,9 +569,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1648f5c018c7ed74d8b6cd11ed1bb68c, type: 2}
   - {fileID: 11400000, guid: 20ebfbbe1d52dc9449bfd289498582d2, type: 2}
   BGMSource: {fileID: 1382390751}
-  MenuTheme: {fileID: 8300000, guid: d135cfd2e43c2a041b3c14ba55a34c3f, type: 3}
-  GameTheme: {fileID: 8300000, guid: 80484c7adc450d84eb180cc6264bf255, type: 3}
-  BossTheme: {fileID: 8300000, guid: ea6c31f3d8ea94a42a3e77d11fc0d288, type: 3}
+  MenuTheme: {fileID: 8300000, guid: d093e5a4fcfe45446b3b66109a029545, type: 3}
+  GameTheme: {fileID: 8300000, guid: f6f1316460ad7f2449237e4140c51757, type: 3}
+  BossTheme: {fileID: 8300000, guid: 73166b220e522e348963f3995e88f1a8, type: 3}
   audioFadeSpeed: 1
   audioFadeTime: 0
   audioFadeGoal: 0

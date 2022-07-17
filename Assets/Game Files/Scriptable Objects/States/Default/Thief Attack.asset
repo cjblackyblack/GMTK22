@@ -130,9 +130,9 @@ MonoBehaviour:
   - {x: 5, y: 10}
   multihitTime: 00000000
   hitboxPos:
-  - {x: 0.33, y: 0, z: 0}
+  - {x: 0.25, y: 0, z: 0}
   hitboxSize:
-  - 0.7
+  - 0.5
   hitboxDamage:
   - 1
   useMagic: 0

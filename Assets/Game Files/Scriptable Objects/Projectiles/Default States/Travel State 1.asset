@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4657c58bab062c4c8cc7a696f7c0970, type: 3}
+  m_Name: Travel State 1
+  m_EditorClassIdentifier: 
+  maxTime: 10
+  exitState: {fileID: 11400000, guid: 6c10304cdec7f474aacd74d6f19fe5ee, type: 2}
+  statusEffects: []
+  forwardMovement:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 7
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 50
+      value: 7
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  verticalMovement:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  strafeMovement:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  iframes: {x: 0, y: 0}
+  armorFrames: {x: 0, y: 0}
+  guardFrames: {x: 0, y: 0}
+  armorPierce: 0
+  ignoreProtections: 0
+  hitParticles: []
+  particleEffects: []
+  particleTime: 
+  particlePos: []
+  sfxTime: 
+  sfxClip: []
+  sfxVolume: []
+  hitSFX: []
+  hitboxTime:
+  - {x: 0, y: 90}
+  multihitTime: 00000000
+  hitboxPos:
+  - {x: 0, y: 0, z: 0}
+  hitboxSize:
+  - 0.45
+  hitboxDamage:
+  - 1
+  useMagic: 1
+  flatDamage: 0
+  hitboxKnockbackDir:
+  - {x: 0, y: 1}
+  knockbackStrength:
+  - 2
+  hitboxStun: 41000000
+  hitStopTime: 0

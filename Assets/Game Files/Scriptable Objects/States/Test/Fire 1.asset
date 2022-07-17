@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interuptable: 0
   attackName: Attack
-  maxTime: 70
+  maxTime: 20
   strafeMultiplier:
     serializedVersion: 2
     m_Curve:
@@ -138,10 +138,8 @@ MonoBehaviour:
   hitboxStun: 
   hitStopTime: 0
   projectiles:
-  - {fileID: 3720875340865874262, guid: defe45a6b8618284b8d845465e3b2b28, type: 3}
-  - {fileID: 3720875340865874262, guid: defe45a6b8618284b8d845465e3b2b28, type: 3}
-  projectileTime: 010000001e000000
+  - {fileID: 3720875340865874262, guid: e392082cb7404714a8a2065d2c165848, type: 3}
+  projectileTime: 01000000
   projectilePos:
-  - {x: 0.5, y: 0, z: 0}
   - {x: 0.5, y: 0, z: 0}
   targetAlliance: 2

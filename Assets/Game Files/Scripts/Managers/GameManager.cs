@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
 
 		current = this;
 		Application.targetFrameRate = 60;
+		Screen.SetResolution(720, 480, false);
 		StartCoroutine(StartManager());
 		DontDestroyOnLoad(this.gameObject);
 
@@ -117,11 +118,16 @@ public class GameManager : MonoBehaviour
 		//eventSystem.gameObject.SetActive(false);
 
 		StartCoroutine(WipeScreen(wipeSpeed, 0, 1));
-		if (scene == 1 || scene == SceneManager.sceneCountInBuildSettings - 1)
+		if (scene == 1 || scene == SceneManager.sceneCountInBuildSettings - 1 || scene == SceneManager.sceneCountInBuildSettings - 2)
 		{
 			StartCoroutine(FadeMusic(-audioFadeSpeed, 1, 0));
 		}
 		yield return new WaitUntil(() => (fadeTime == wipe));
+		if (scene == 0)
+		{
+			round = 0;
+		}
+
 		//eventSystem.gameObject.SetActive(true);
 		Time.timeScale = 1;
 		SceneManager.LoadScene(scene);
@@ -217,6 +223,19 @@ public class GameManager : MonoBehaviour
 							if (BGMSource.clip != GameTheme)
 							{
 								BGMSource.clip = GameTheme;
+								BGMSource.Play();
+								StartCoroutine(FadeMusic(audioFadeSpeed, 0, 1));
+							}
+							break;
+						}
+					case 3:
+						{
+
+							PlayerManager.current.playerController.started = true;
+							started = true;
+							if (BGMSource.clip != BossTheme)
+							{
+								BGMSource.clip = BossTheme;
 								BGMSource.Play();
 								StartCoroutine(FadeMusic(audioFadeSpeed, 0, 1));
 							}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interuptable: 0
   attackName: Attack
-  maxTime: 30
+  maxTime: 40
   strafeMultiplier:
     serializedVersion: 2
     m_Curve:
@@ -130,9 +130,9 @@ MonoBehaviour:
   - {x: 20, y: 25}
   multihitTime: 00000000
   hitboxPos:
-  - {x: 1, y: 0, z: 0}
+  - {x: 0.75, y: 0, z: 0}
   hitboxSize:
-  - 0.5
+  - 0.75
   hitboxDamage:
   - 1
   useMagic: 0
