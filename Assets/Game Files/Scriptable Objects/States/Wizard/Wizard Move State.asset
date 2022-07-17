@@ -17,13 +17,21 @@ MonoBehaviour:
   moveSpeed: 0
   MPRestoreTime: 0
   teleportFrame: 30
-  cooldownFrames: 15
+  cooldownFrames: 60
   strafeMultiplier:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  sfxTime: 000000001e000000
+  sfxClip:
+  - {fileID: 8300000, guid: ce43ef98219a1f945b898d92fbf66aed, type: 3}
+  - {fileID: 8300000, guid: 7b4eb72efcfd4034c9b50c1cf7b0d90c, type: 3}
+  sfxVolume:
+  - 1
+  - 1
+  hitSFX: []
   forwardMovement:
     serializedVersion: 2
     m_Curve: []
