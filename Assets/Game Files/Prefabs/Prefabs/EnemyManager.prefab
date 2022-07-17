@@ -1222,7 +1222,7 @@ MonoBehaviour:
     maxNumber: 2
     currentNumber: 0
     spawnAmount: 1
-    spawnDC: 3
+    spawnDC: 0
     minRound: 2
     maxAmountScale: 0
     spawnAmountScale: 0
@@ -1230,10 +1230,10 @@ MonoBehaviour:
     maxTimer: 30
   - type: 2
     prefab: {fileID: 6468992371243593465, guid: 12f13e3af36d6604781d449aaa349a23, type: 3}
-    maxNumber: 2
+    maxNumber: 3
     currentNumber: 0
     spawnAmount: 1
-    spawnDC: 2
+    spawnDC: 0
     minRound: 1
     maxAmountScale: 2
     spawnAmountScale: 1
@@ -1244,8 +1244,8 @@ MonoBehaviour:
     maxNumber: 9
     currentNumber: 0
     spawnAmount: 2
-    spawnDC: 3
-    minRound: 0
+    spawnDC: 0
+    minRound: 2
     maxAmountScale: 3
     spawnAmountScale: 0
     spawnTimer: 20
