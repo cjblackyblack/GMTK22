@@ -12,6 +12,17 @@ public class WizardMoveState : SmartState
     public int cooldownFrames;
 	public AnimationCurve strafeMultiplier;
 
+    
+    [Header("SFX")]
+    [SerializeField]
+    public int[] sfxTime;
+    [SerializeField]
+    protected AudioClip[] sfxClip;
+    [SerializeField]
+    protected float[] sfxVolume;
+    [SerializeField]
+    protected AudioClip[] hitSFX;
+
 	[SerializeField]
 	private AnimationCurve forwardMovement;
 	[SerializeField]
@@ -35,9 +46,20 @@ public class WizardMoveState : SmartState
 	{
 		//smartObject.velocity.x = (((smartObject._inputDir.normalized * forwardMovement.Evaluate(smartObject.currentTime)) + (smartObject._inputDir.normalized.Rotate(-90) * strafeMovement.Evaluate(smartObject.currentTime))).ConvertVector2()).x * moveSpeed * smartObject.stats.moveSpeed * smartObject.statMods.moveSpeedMod;
 		//smartObject.velocity.z = (((smartObject._inputDir.normalized * forwardMovement.Evaluate(smartObject.currentTime)) + (smartObject._inputDir.normalized.Rotate(-90) * strafeMovement.Evaluate(smartObject.currentTime))).ConvertVector2()).z * moveSpeed * smartObject.stats.moveSpeed * smartObject.statMods.moveSpeedMod;
-        
+        CreateSFX(smartObject);
 		HandleState(smartObject);
 	}
+
+    protected void CreateSFX(SmartObject smartObject)
+    {
+        for (int i = 0; i < sfxTime.Length; i++)
+        {
+            if (smartObject.currentTime == sfxTime[i])
+            {
+                smartObject.audioSource.PlayOneShot(sfxClip[i], sfxVolume[i]);
+            }
+        }
+    }
 
 	public override void OnExit(SmartObject smartObject)
 	{

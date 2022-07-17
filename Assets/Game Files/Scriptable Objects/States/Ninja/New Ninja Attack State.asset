@@ -50,12 +50,13 @@ MonoBehaviour:
   particleEffects: []
   particleTime: 
   particlePos: []
-  sfxTime: 0a000000140000001e000000
+  sfxTime: 000000000a000000140000001e000000
   sfxClip:
-  - {fileID: 8300000, guid: 667f486aef734c0438d43012e5536212, type: 3}
+  - {fileID: 8300000, guid: b51690b377531594bab10dd1d96defed, type: 3}
   - {fileID: 8300000, guid: 667f486aef734c0438d43012e5536212, type: 3}
   - {fileID: 8300000, guid: 667f486aef734c0438d43012e5536212, type: 3}
   sfxVolume:
+  - 1
   - 1
   - 1
   - 1
