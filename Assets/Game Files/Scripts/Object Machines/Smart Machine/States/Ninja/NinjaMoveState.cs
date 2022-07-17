@@ -18,9 +18,7 @@ public class NinjaMoveState : SmartState {
 	public override void OnEnter(SmartObject smartObject)
 	{
 		base.OnEnter(smartObject);
-        smartObject.stateMachine.pointMem = EnemyManager.enemyManager.GetNinjaPoint();
-        Debug.Log(smartObject.stateMachine.pointMem);
-        
+        smartObject.stateMachine.pointMem = EnemyManager.enemyManager.GetNinjaPoint();       
 		smartObject.anim.SetBool("Moving", true);
 		smartObject.anim.Play("Move", 0, 0);
 	}
