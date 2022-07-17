@@ -19,6 +19,15 @@ public class GameManager : MonoBehaviour
 	public CharacterJob[] CurrentJobs = new CharacterJob[3];
 
 
+	[Header("Audio")]
+	public AudioSource BGMSource;
+	public AudioClip MenuTheme;
+	public AudioClip GameTheme;
+	public AudioClip BossTheme;
+	public float audioFadeSpeed;
+	public float audioFadeTime;
+	public float audioFadeGoal;
+
 	[Header("Screen Wipe")]
 	public float wipeSpeed;
 	float fadeTime;
@@ -34,6 +43,7 @@ public class GameManager : MonoBehaviour
 		Application.targetFrameRate = 60;
 		StartCoroutine(StartManager());
 		DontDestroyOnLoad(this.gameObject);
+
 	}
 
 	IEnumerator StartManager()
@@ -97,7 +107,7 @@ public class GameManager : MonoBehaviour
 
 	public void LoadLevel(int scene)
 	{
-		StopAllCoroutines();
+		//StopAllCoroutines();
 		StartCoroutine(LoadLevelCoroutine(scene));
 	}
 
@@ -105,7 +115,12 @@ public class GameManager : MonoBehaviour
 	{
 		Debug.Log($"loading {scene}");
 		//eventSystem.gameObject.SetActive(false);
+
 		StartCoroutine(WipeScreen(wipeSpeed, 0, 1));
+		if (scene == 1 || scene == SceneManager.sceneCountInBuildSettings - 1)
+		{
+			StartCoroutine(FadeMusic(-audioFadeSpeed, 1, 0));
+		}
 		yield return new WaitUntil(() => (fadeTime == wipe));
 		//eventSystem.gameObject.SetActive(true);
 		Time.timeScale = 1;
@@ -133,18 +148,21 @@ public class GameManager : MonoBehaviour
 				{
 					case 0:
 						{
+							
 							score = 0;
 							PlayerManager.current.SetFormation(0);
 							UIManager.current.ResetFormationVis();
 							UIManager.current.SetAllGameCanvasesActive(false);
-							for (int i = 0; i < PlayerManager.current.Party.Length; i++)
-							{
-								PlayerManager.current.Party[i].SetJob(CurrentJobs[i], true);
-							}
+
 
 							for (int i = 0; i < 3; i++)
 							{
 								CurrentJobs[i] = Jobs[Random.Range(0, Jobs.Length)];
+							}
+
+							for (int i = 0; i < PlayerManager.current.Party.Length; i++)
+							{
+								PlayerManager.current.Party[i].SetJob(CurrentJobs[i], true);
 							}
 							break;
 						}
@@ -165,31 +183,54 @@ public class GameManager : MonoBehaviour
 
 			yield return new WaitForSecondsRealtime(0.25f);
 			StartCoroutine(WipeScreen(-wipeSpeed, 1, 0));
+
 			//later behaviours here
 			Debug.Log("starting");
 			if (SceneManager.GetActiveScene().name == "End") //hack because we don't yet know what number the final scene is
 			{
-
+				StartCoroutine(FadeMusic(audioFadeSpeed, 0, 1));
+				BGMSource.clip = MenuTheme;
+				BGMSource.Play();
 			}
 			else
 				switch (scene)
 				{
 					case 0:
 						{
+							if (!BGMSource.isPlaying) 
+							{
+								BGMSource.clip = MenuTheme;
+								BGMSource.Play();
+								StartCoroutine(FadeMusic(audioFadeSpeed, 0, 1));
+								Debug.Log("fading in special on 0");
+							} 
 							PlayerManager.current.playerController.started = true;
 							started = true;
 							break;
 						}
 					case 1:
 						{
+
 							PlayerManager.current.playerController.started = true;
 							started = true;
+							if (BGMSource.clip != GameTheme)
+							{
+								BGMSource.clip = GameTheme;
+								BGMSource.Play();
+								StartCoroutine(FadeMusic(audioFadeSpeed, 0, 1));
+							}
 							break;
 						}
 					default:
 						{
 							PlayerManager.current.playerController.started = true;
 							started = true;
+							if (BGMSource.clip != GameTheme)
+							{
+								BGMSource.clip = GameTheme;
+								BGMSource.Play();
+								StartCoroutine(FadeMusic(audioFadeSpeed, 0, 1));
+							}
 							break;
 						}
 				}
@@ -223,5 +264,31 @@ public class GameManager : MonoBehaviour
 			foreach (Material mat in transitions)
 				mat.SetFloat("_Cutoff", Mathf.RoundToInt(goal));
 		}
+	}
+
+	public IEnumerator FadeMusic(float rate, float start, float goal)
+	{
+		audioFadeTime = start;
+		audioFadeGoal = goal;
+
+		while (audioFadeTime != goal)
+		{
+			//Debug.Log($"Ticking by { rate * 0.0125f}");
+			BGMSource.volume = audioFadeTime;
+
+			audioFadeTime += rate * 0.0125f;
+
+			audioFadeTime = Mathf.Clamp01(audioFadeTime);
+			yield return new WaitForEndOfFrame();
+
+			if (rate > 1 && audioFadeTime > goal)
+				audioFadeTime = goal;
+
+			if (rate < 1 && audioFadeTime < goal)
+				audioFadeTime = goal;
+
+		}
+
+		BGMSource.volume = goal;
 	}
 }

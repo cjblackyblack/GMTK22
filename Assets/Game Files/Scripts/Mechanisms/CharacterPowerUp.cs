@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class CharacterPowerUp : MonoBehaviour
 {
+	public bool used;
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.GetComponent<PlayerObject>())
+		if (other.GetComponent<PlayerObject>() && !used)
 		{
 			for(int i = 0; i < PlayerManager.current.StaticParty.Length; i++)
 			{
 				if(PlayerManager.current.StaticParty[i] == other.GetComponent<PlayerObject>())
 				{
+					used = true;
 					Debug.Log($"found match");
 					CharacterJob randomJob = GameManager.current.Jobs[Random.Range(0, GameManager.current.Jobs.Length)];
 					Debug.Log($"rolling {randomJob.name}");
