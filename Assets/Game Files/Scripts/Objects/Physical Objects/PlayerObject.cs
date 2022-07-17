@@ -122,7 +122,7 @@ public class PlayerObject : SmartObject
 				return properties.objectTangibility;
 			OnStateChange?.Invoke(this, StateEnums.Hurt);
 		}
-
+		PartyElement.UpdateHealth(stats.HP);
 		stats.HP = Mathf.Clamp(stats.HP, 0, stats.maxHP);
 
 		for (int i = 0; i < PlayerManager.current.StaticParty.Length; i++)
