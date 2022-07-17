@@ -1,52 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!28 &-8868742409712258457
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: z__GradientRampTex{"mode":0,"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.42058441042900088},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.45000380277633669}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 256
-  m_Height: 1
-  m_CompleteImageSize: 1024
-  m_MipsStripped: 0
-  m_TextureFormat: 5
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  m_PlatformBlob: 
-  image data: 1024
-  _typelessdata: ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff1a1a1aff3c3c3cff5e5e5eff808080ffa1a1a1ffc3c3c3ffe5e5e5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!114 &-6403243815149700225
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -117,7 +70,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GradientRamp:
-        m_Texture: {fileID: -8868742409712258457}
+        m_Texture: {fileID: 4998894288739322929}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -226,3 +179,50 @@ Material:
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
+--- !u!28 &4998894288739322929
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: z__GradientRampTex{"mode":0,"colorKeys":[{"color":{"r":0.14840689301490785,"g":0.16676747798919679,"b":0.29019609093666079,"a":1.0},"time":0.42058441042900088},{"color":{"r":0.21426664292812348,"g":0.32299962639808657,"b":0.4245283007621765,"a":1.0},"time":0.45000380277633669}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 256
+  m_Height: 1
+  m_CompleteImageSize: 1024
+  m_MipsStripped: 0
+  m_TextureFormat: 5
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  m_PlatformBlob: 
+  image data: 1024
+  _typelessdata: ff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff262b4aff282f4dff2a3452ff2c3957ff2e3e5bff304460ff334964ff354e69ff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526cff37526c
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 

@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 3110176523750466056}
   - component: {fileID: 3110176523750466057}
   - component: {fileID: 5277332954789646642}
+  - component: {fileID: -9014300274872903817}
   m_Layer: 6
   m_Name: Phalanx
   m_TagString: Untagged
@@ -264,8 +265,9 @@ MonoBehaviour:
   stats:
     scaledTime: 1
     HP: 10
-    maxHP: 10
+    maxHP: 6
     moveSpeed: 10
+    scoreValue: 0
   statMods:
     maxHPMod: 1
     damageMod: 1
@@ -294,6 +296,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   hurtPos: {x: 0, y: 0, z: 0}
   drawHitboxes: 0
+  type: 0
   flyCurve:
     serializedVersion: 2
     m_Curve:
@@ -333,6 +336,15 @@ MonoBehaviour:
   currentStateEnum: 0
   currentState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
   previousState: {fileID: 11400000, guid: 3737beef150063948ae1510753be5365, type: 2}
+  playerTargetMem: 0
+  randomIntMem: 0
+  savedTime: 0
+  dirMem: {x: 0, y: 0}
+  pointMem:
+    point: {fileID: 0}
+    NinjaMove: {x: 0, y: 0}
+    NinjaShoot: {x: 0, y: 0}
+    BomberSpawnDir: {x: 0, y: 0}
 --- !u!114 &5973901599266319936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,3 +403,99 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!82 &-9014300274872903817
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110176523750466054}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
