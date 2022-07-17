@@ -10,6 +10,12 @@ public class StateMachine : MonoBehaviour
             return UnityEngine.Random.Range(0,6);
         }
     }
+
+    public static int RollD20 {
+        get {
+            return UnityEngine.Random.Range(1,21);
+        }
+    }
     public Dictionary<StateEnums, SmartState> stateDictionary;
     public StateEnums currentStateEnum;
     public StateEnums previousStateEnum;

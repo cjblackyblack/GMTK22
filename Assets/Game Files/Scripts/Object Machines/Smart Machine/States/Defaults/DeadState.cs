@@ -6,6 +6,8 @@ public class DeadState : SmartState
 {
 	public int maxTime;
 	public GameObject deadFX;
+	public GameObject powerUpPrefab;
+	public int powerUpDC;
 	public override void OnEnter(SmartObject smartObject)
 	{
 		base.OnEnter(smartObject);
@@ -17,7 +19,10 @@ public class DeadState : SmartState
 		smartObject.properties.objectTangibility = PhysicalObjectTangibility.Intangible;
 
 		smartObject.anim.Play("Dead", 0, 0);
-
+		if(powerUpPrefab && StateMachine.RollD20 > powerUpDC)
+		{
+			Instantiate(powerUpPrefab, smartObject.tform.position, Quaternion.identity);
+		}
 		if (deadFX != null)
 			Instantiate(deadFX, smartObject.transform.position, Quaternion.identity);
 	}

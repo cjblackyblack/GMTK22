@@ -112,10 +112,6 @@ public class EnemyManager : MonoBehaviour
                         sp.SetEnemySpawn(globalEnemySpawnDelay);
                     }
                 }
-                else
-                {
-                    print("no spawner found for " + t);
-                }
             }
         }
     }
