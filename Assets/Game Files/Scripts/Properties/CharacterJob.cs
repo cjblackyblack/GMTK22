@@ -6,8 +6,8 @@ using UnityEngine.Animations;
 [CreateAssetMenu(menuName = "CharacterJob")]
 public class CharacterJob : ScriptableObject
 {
-	public AttackState Attack;
-	public AttackState SpecialAttack;
+	public SmartState Attack;
+	public SmartState SpecialAttack;
 	public string jobName;
 	[Header("Data")]
 	public BaseStats jobStats;

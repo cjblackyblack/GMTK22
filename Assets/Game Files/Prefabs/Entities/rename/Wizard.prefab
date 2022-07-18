@@ -208,7 +208,7 @@ MonoBehaviour:
   _inputDir: {x: 0, y: 0}
   inputDir: {x: 0, y: 0, z: 0}
   storedInput: {x: 0, y: 0}
-  job: {fileID: 11400000, guid: fbc8ed21ef23bde4d8706fb9df313ffc, type: 2}
+  job: {fileID: 11400000, guid: 9cd6e76bc98d13847adca1c564f4a0cf, type: 2}
   targetPos: {x: 0, y: 0, z: 0}
   hurtPos: {x: 0, y: 0, z: 0}
   drawHitboxes: 0

@@ -17975,6 +17975,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2203413347025132566, guid: 50fd7b2f92bc5924ea16832e9370f88d, type: 3}
+      propertyPath: globalEnemySpawnDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203413347025132566, guid: 50fd7b2f92bc5924ea16832e9370f88d, type: 3}
+      propertyPath: enemies.Array.data[1].maxTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203413347025132566, guid: 50fd7b2f92bc5924ea16832e9370f88d, type: 3}
+      propertyPath: enemies.Array.data[2].maxTimer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203413347025132566, guid: 50fd7b2f92bc5924ea16832e9370f88d, type: 3}
+      propertyPath: enemies.Array.data[3].maxTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203413347025132566, guid: 50fd7b2f92bc5924ea16832e9370f88d, type: 3}
+      propertyPath: enemies.Array.data[0].spawnTimer
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203413347025132566, guid: 50fd7b2f92bc5924ea16832e9370f88d, type: 3}
+      propertyPath: enemies.Array.data[2].spawnTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203413347025132566, guid: 50fd7b2f92bc5924ea16832e9370f88d, type: 3}
+      propertyPath: enemies.Array.data[3].spawnTimer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2203413347025132567, guid: 50fd7b2f92bc5924ea16832e9370f88d, type: 3}
       propertyPath: m_RootOrder
       value: 1
